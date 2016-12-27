@@ -4,10 +4,10 @@
   </div>
   <div class="col-md-9">
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add City </b></h1>
-    <form (ngSubmit)='addcity()' #addform="ngForm">
+    <form (ngSubmit)='editcity()' #addform="ngForm">
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">City name</span>
-  <input name="name" #name='ngModel' [(ngModel)]="city.city_name" type="text" class="form-control" placeholder="Enter City name"  required>
+  <input name="name" #name='ngModel' [(ngModel)]="city_name" type="text" class="form-control" placeholder="Enter City name"  required>
 </div>
 
 <br>

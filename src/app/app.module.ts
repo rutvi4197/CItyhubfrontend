@@ -9,6 +9,9 @@ import { CitydataService } from './shared/citydata.service';
 import { HeaderComponent } from './header.component';
 import { routing } from './app.routing';
 import { AddcityComponent } from './city-tbl/addcity.component';
+import { EditcityComponent } from './city-tbl/editcity.component';
+import { AnsTblComponent } from './ans-tbl/ans-tbl.component';
+import { AnsclassComponent } from './shared/ansclass/ansclass.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AddcityComponent } from './city-tbl/addcity.component';
     SidebarComponent,
     CityTblComponent,
     HeaderComponent,
-    AddcityComponent
+    AddcityComponent,
+    EditcityComponent,
+    AnsTblComponent,
+    AnsclassComponent
   ],
   imports: [
     BrowserModule,
