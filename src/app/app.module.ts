@@ -11,8 +11,14 @@ import { routing } from './app.routing';
 import { AddcityComponent } from './city-tbl/addcity.component';
 import { EditcityComponent } from './city-tbl/editcity.component';
 import { AnsTblComponent } from './ans-tbl/ans-tbl.component';
-import { AnsclassComponent } from './shared/ansclass/ansclass.component';
-
+import { AnsdataService } from './shared/ansdata.service';
+import { BookTblComponent } from './book-tbl/book-tbl.component';
+import {  BookdataService } from './shared/bookdata.service';
+import { EventQueTblComponent } from './event-que-tbl/event-que-tbl.component';
+import { EventQuedataService } from './shared/event-quedata.service';
+import { EventComponent } from './event/event.component';
+import { ApproveComponent } from './event/approve.component';
+import { EventdataService } from './shared/eventdata.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,11 @@ import { AnsclassComponent } from './shared/ansclass/ansclass.component';
     AddcityComponent,
     EditcityComponent,
     AnsTblComponent,
-    AnsclassComponent
+    BookTblComponent,
+    EventQueTblComponent,
+    EventComponent,
+    ApproveComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -30,7 +40,7 @@ import { AnsclassComponent } from './shared/ansclass/ansclass.component';
     HttpModule,
     routing
   ],
-  providers: [CitydataService],
+  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,EventdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
