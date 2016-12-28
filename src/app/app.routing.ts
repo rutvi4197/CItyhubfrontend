@@ -6,15 +6,17 @@ import { AnsTblComponent } from './ans-tbl/ans-tbl.component';
 import { EventQueTblComponent } from './event-que-tbl/event-que-tbl.component';
 import { EventComponent } from './event/event.component';
 import { ApproveComponent } from './event/approve.component';
+import { BookTblComponent } from './book-tbl/book-tbl.component';
 const router:Routes=[
-    {path:'',redirectTo:'/allcity',pathMatch:'full'},
+    {path:'',redirectTo:'/approve',pathMatch:'full'},
     {path:'allcity',component:CityTblComponent},
     {path:'addcity',component:AddcityComponent},
     {path:'editcity/:id',component:EditcityComponent},
     {path:'allans',component:AnsTblComponent},
     {path:'allque',component:EventQueTblComponent},
     {path:'approve',component:ApproveComponent},
-    {path:'allevent',component:EventComponent}
+    {path:'allevent',component:EventComponent},
+    {path:'bookevent/:id',component:BookTblComponent}
 ];
 
 export const routing=RouterModule.forRoot(router);
