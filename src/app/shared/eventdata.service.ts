@@ -9,6 +9,7 @@ public url1:string="http://localhost:3000/event/";
   constructor(private _http:Http) { }
   getforapprove()
   {
+    console.log("hello from services");
     return this._http.get(this.url).map(
       (res:Response)=>res.json()
     );

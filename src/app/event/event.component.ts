@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Eventclass } from '../shared/eventclass';
 import { EventdataService } from '../shared/eventdata.service';
 
@@ -9,7 +10,7 @@ import { EventdataService } from '../shared/eventdata.service';
 })
 export class EventComponent implements OnInit {
 public eventarr:Eventclass[]=[];
-  constructor(private _Dataservice:EventdataService) { }
+  constructor(private _Dataservice:EventdataService,private _router:Router) { }
 
   ngOnInit() {
      this._Dataservice.getAllEvent().subscribe(
@@ -25,6 +26,10 @@ public eventarr:Eventclass[]=[];
         console.log("successfully get");
       }
     );
+  }
+  ticketinfo(item:Eventclass)
+  {
+    this._router.navigate(['/bookevent',item.pk_event_id]);
   }
 
 }

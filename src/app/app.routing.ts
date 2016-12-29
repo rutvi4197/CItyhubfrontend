@@ -7,7 +7,8 @@ import { EventQueTblComponent } from './event-que-tbl/event-que-tbl.component';
 import { EventComponent } from './event/event.component';
 import { ApproveComponent } from './event/approve.component';
 import { BookTblComponent } from './book-tbl/book-tbl.component';
-const router:Routes=[
+import { LikeTblComponent } from './like-tbl/like-tbl.component';
+const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
     {path:'allcity',component:CityTblComponent},
     {path:'addcity',component:AddcityComponent},
@@ -16,7 +17,8 @@ const router:Routes=[
     {path:'allque',component:EventQueTblComponent},
     {path:'approve',component:ApproveComponent},
     {path:'allevent',component:EventComponent},
-    {path:'bookevent/:id',component:BookTblComponent}
+    {path:'bookevent/:id',component:BookTblComponent},
+    {path:'likeevent',component:LikeTblComponent},
 ];
 
 export const routing=RouterModule.forRoot(router);

@@ -19,6 +19,8 @@ import { EventQuedataService } from './shared/event-quedata.service';
 import { EventComponent } from './event/event.component';
 import { ApproveComponent } from './event/approve.component';
 import { EventdataService } from './shared/eventdata.service';
+import { LikeTblComponent } from './like-tbl/like-tbl.component';
+import { LikedataService } from './shared/likedata.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,7 @@ import { EventdataService } from './shared/eventdata.service';
     EventQueTblComponent,
     EventComponent,
     ApproveComponent,
+    LikeTblComponent,
     
   ],
   imports: [
@@ -40,7 +43,7 @@ import { EventdataService } from './shared/eventdata.service';
     HttpModule,
     routing
   ],
-  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,EventdataService],
+  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,EventdataService,LikedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

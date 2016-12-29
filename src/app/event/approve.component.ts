@@ -28,6 +28,7 @@ public flag:number;
   }
 apevent(item:Eventclass)
 {
+  console.log("aama gayu");
 item.flag=1;
 this._Dataservice.updateflag(item).subscribe(
   (data:any)=>{

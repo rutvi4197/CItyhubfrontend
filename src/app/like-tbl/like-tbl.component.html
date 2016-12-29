@@ -5,7 +5,7 @@
   </div>
   <div class="col-md-9">
     <br><br><br>
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Event Table</b></h1>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Like Dislike on Event</b></h1>
     <br>
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
@@ -14,19 +14,15 @@
       <th style="text-align: center">Event Name</th>
       <th style="text-align: center">Event Desc</th>
       <th style="text-align: center">Event Price</th>
-      <th style="text-align: center">Action</th>
+      
       </tr>
     </thead>
-    <tbody *ngFor="let item of eventarr ">
+    <tbody *ngFor="let item of likearr ">
       <tr style="background-color: lightgray">
-      <td>{{item.pk_event_id}}</td>
+         <td>{{item.pk_event_id}}</td>
       <td>{{item.event_name}}</td>
-      <td>{{item.event_des}}</td>
-      <td>{{item.event_price}}</td>
-      <td><button (click)="ticketinfo(item)" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
-                            Ticket Details
-                          </button>
-      </td>
+      <td>{{item.likecnt}}</td>
+      <td>{{item.dislikecnt}}</td>
      </tr>
     </tbody>
   </table>
