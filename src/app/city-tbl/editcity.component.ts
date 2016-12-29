@@ -9,6 +9,8 @@ import { Subscription } from 'rxjs/Rx';
   styles: []
 })
 export class EditcityComponent implements OnInit {
+
+  
 public _subscription:Subscription;
 public cityarr:Cityclass[]=[];
 public city_id:number;
