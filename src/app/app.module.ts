@@ -19,8 +19,26 @@ import { EventQuedataService } from './shared/event-quedata.service';
 import { EventComponent } from './event/event.component';
 import { ApproveComponent } from './event/approve.component';
 import { EventdataService } from './shared/eventdata.service';
+<<<<<<< HEAD
 import { LikeTblComponent } from './like-tbl/like-tbl.component';
 import { LikedataService } from './shared/likedata.service';
+=======
+import { CatdataService } from './shared/catdata.service';
+import { CatTblComponent } from './cat-tbl/cat-tbl.component';
+import { AddcatComponent } from './cat-tbl/addcat.component';
+import { EditcatComponent } from './cat-tbl/editcat.component';
+import { PaymentTblComponent } from './payment-tbl/payment-tbl.component';
+import { PaymentdataService } from './shared/paymentdata.service';
+import { TestimonialTblComponent } from './testimonial-tbl/testimonial-tbl.component';
+import { TestimonialdataService } from './shared/testimonialdata.service';
+import { VenueTblComponent } from './venue-tbl/venue-tbl.component';
+import { VenuedataService } from './shared/venuedata.service';
+import { WalletTblComponent } from './wallet-tbl/wallet-tbl.component';
+import { UserTblComponent } from './user-tbl/user-tbl.component';
+import { WalletdataService } from './shared/walletdata.service';
+import { UserdataService } from './shared/userdata.service';
+
+>>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +52,18 @@ import { LikedataService } from './shared/likedata.service';
     EventQueTblComponent,
     EventComponent,
     ApproveComponent,
+<<<<<<< HEAD
     LikeTblComponent,
+=======
+    CatTblComponent,
+    AddcatComponent,
+    EditcatComponent,
+    PaymentTblComponent,
+    TestimonialTblComponent,
+    VenueTblComponent,
+    WalletTblComponent,
+    UserTblComponent
+>>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
     
   ],
   imports: [
@@ -43,7 +72,13 @@ import { LikedataService } from './shared/likedata.service';
     HttpModule,
     routing
   ],
+<<<<<<< HEAD
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,EventdataService,LikedataService],
+=======
+  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
+  EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
+  VenuedataService,UserdataService,VenuedataService,WalletdataService],
+>>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
   bootstrap: [AppComponent]
 })
 export class AppModule { }

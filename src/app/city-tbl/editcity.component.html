@@ -5,6 +5,7 @@
   <div class="col-md-9">
     <br><br><br>
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add City </b></h1>
+
     <form (ngSubmit)='editcity()' #addform="ngForm">
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">City name</span>
@@ -16,7 +17,7 @@
   City name  is required
 </div>
 
-<Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
+<button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</button>
 
 </form>
   </div>
