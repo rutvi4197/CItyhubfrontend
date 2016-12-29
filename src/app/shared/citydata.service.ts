@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class CitydataService {
 private url:string="http://localhost:3000/cities/";
-  constructor(private _http:Http,) { }
+  constructor(private _http:Http) { }
   getAllCity()
   {
     return this._http.get(this.url).map(
