@@ -10,9 +10,6 @@ export class Eventclass {
     }
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cca2e93368755470789ff84d330d8cc0c33e8ae8
     
     

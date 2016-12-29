@@ -19,10 +19,8 @@ import { EventQuedataService } from './shared/event-quedata.service';
 import { EventComponent } from './event/event.component';
 import { ApproveComponent } from './event/approve.component';
 import { EventdataService } from './shared/eventdata.service';
-<<<<<<< HEAD
 import { LikeTblComponent } from './like-tbl/like-tbl.component';
 import { LikedataService } from './shared/likedata.service';
-=======
 import { CatdataService } from './shared/catdata.service';
 import { CatTblComponent } from './cat-tbl/cat-tbl.component';
 import { AddcatComponent } from './cat-tbl/addcat.component';
@@ -38,7 +36,7 @@ import { UserTblComponent } from './user-tbl/user-tbl.component';
 import { WalletdataService } from './shared/walletdata.service';
 import { UserdataService } from './shared/userdata.service';
 
->>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +50,7 @@ import { UserdataService } from './shared/userdata.service';
     EventQueTblComponent,
     EventComponent,
     ApproveComponent,
-<<<<<<< HEAD
     LikeTblComponent,
-=======
     CatTblComponent,
     AddcatComponent,
     EditcatComponent,
@@ -62,9 +58,7 @@ import { UserdataService } from './shared/userdata.service';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
-    UserTblComponent
->>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
-    
+    UserTblComponent    
   ],
   imports: [
     BrowserModule,
@@ -72,13 +66,9 @@ import { UserdataService } from './shared/userdata.service';
     HttpModule,
     routing
   ],
-<<<<<<< HEAD
-  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,EventdataService,LikedataService],
-=======
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
-  VenuedataService,UserdataService,VenuedataService,WalletdataService],
->>>>>>> e96e236772a21d86fa0940e4ec9d9d49e35a11f4
+  VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
