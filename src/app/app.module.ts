@@ -36,10 +36,6 @@ import { UserTblComponent } from './user-tbl/user-tbl.component';
 import { WalletdataService } from './shared/walletdata.service';
 import { UserdataService } from './shared/userdata.service';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,13 +57,8 @@ import { UserdataService } from './shared/userdata.service';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
-<<<<<<< HEAD
     UserTblComponent
-    
-=======
-    UserTblComponent    
->>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
-  ],
+    ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -76,7 +67,7 @@ import { UserdataService } from './shared/userdata.service';
   ],
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
-  VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService],
+  UserdataService,VenuedataService,WalletdataService,LikedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
