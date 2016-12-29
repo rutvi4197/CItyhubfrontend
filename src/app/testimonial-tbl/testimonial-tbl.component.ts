@@ -17,7 +17,7 @@ testarr:Testimonialclass[]=[];
   }
 
   ngOnInit() {
-    this._testdata.getAllTestimonial().subscribe(
+    this._testdata.getAllTestimonialJoin().subscribe(
       (data:Testimonialclass[])=>{
         this.testarr=data;
       },

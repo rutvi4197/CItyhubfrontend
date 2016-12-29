@@ -2,16 +2,16 @@
   <div class="col-md-3">
     <app-sidebar></app-sidebar>
   </div>
+
   <div class="col-md-9">
+ <br><br><br>
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Wallet Table</b></h1>
-    <br><br>
-   <!--<button (click)="addCat()" type="button" style="height: 40px; width: 40px; background-color:palegreen"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>-->
-  <table class="table table-striped" style="font-size: 20px;text-align: center" >
-   
+   <table class="table table-striped" style="font-size: 20px;text-align: center" >
+
     <thead style="color:blue; font-size: 25px;">
       <tr>
       <th style="text-align: center">Wallet ID</th>
-      <th style="text-align: center">Emaiil Id</th>
+      <th style="text-align: center">User Name</th>
       <th style="text-align: center">Wallet Amount</th>
       <th style="text-align: center">Wallet Date</th> 
       </tr>
@@ -20,7 +20,7 @@
     <tbody *ngFor="let item of walarr ">
       <tr style="background-color: lightgray">
       <td>{{item.pk_wallet_id}}</td>
-      <td>{{item.fk_email_id}}</td>
+      <td>{{item.user_name}}</td>
       <td>{{item.wallet_amnt}}</td>
       <td>{{item.wallet_date}}</td>
      </tr>

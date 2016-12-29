@@ -18,7 +18,7 @@ payarr:Paymentclass[]=[];
   }
 
   ngOnInit() {
-    this._paydata.getAllPayment().subscribe(
+    this._paydata.getAllPaymentJoin().subscribe(
       (data:Paymentclass[])=>{
         this.payarr=data;
       },

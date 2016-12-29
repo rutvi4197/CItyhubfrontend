@@ -2,16 +2,15 @@
   <div class="col-md-3">
     <app-sidebar></app-sidebar>
   </div>
+
   <div class="col-md-9">
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Testimonial Table</b></h1>
-    <br><br>
-   <!--<button (click)="addCat()" type="button" style="height: 40px; width: 40px; background-color:palegreen"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>-->
-  <table class="table table-striped" style="font-size: 20px;text-align: center" >
-   
+ <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Review Table</b></h1>
+    <table class="table table-striped" style="font-size: 20px;text-align: center" >
+
     <thead style="color:blue; font-size: 25px;">
       <tr>
-      <th style="text-align: center">Payment ID</th>
-      <th style="text-align: center">Email Id</th>
+      <th style="text-align: center">User Name</th>
       <th style="text-align: center">Review Description</th>
       <th style="text-align: center">Review Like</th>
       <th style="text-align: center">Action</th>
@@ -20,8 +19,7 @@
 
     <tbody *ngFor="let item of testarr ">
       <tr style="background-color: lightgray">
-      <td>{{item.pk_review_id}}</td>
-      <td>{{item.fk_email_id}}</td>
+      <td>{{item.user_name}}</td>
       <td>{{item.review_desc}}</td>
       <td>{{item.review_like}}</td>
       

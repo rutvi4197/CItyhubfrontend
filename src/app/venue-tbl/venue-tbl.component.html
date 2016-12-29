@@ -2,18 +2,19 @@
   <div class="col-md-3">
     <app-sidebar></app-sidebar>
   </div>
+
   <div class="col-md-9">
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Testimonial Table</b></h1>
-    <br><br>
-   <!--<button (click)="addCat()" type="button" style="height: 40px; width: 40px; background-color:palegreen"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>-->
+ <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Venue Table</b></h1>
+
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
-   
-    <thead style="color:blue; font-size: 25px;">
+
+   <thead style="color:blue; font-size: 25px;">
       <tr>
       <th style="text-align: center">Venue ID</th>
       <th style="text-align: center">Venue Name</th>
       <th style="text-align: center">Venue Address</th>
-      <th style="text-align: center">City Id</th>
+      <th style="text-align: center">City Name</th>
       <th style="text-align: center">Pincode</th>
       <th style="text-align: center">Action</th>
       </tr>
@@ -24,7 +25,7 @@
       <td>{{item.pk_venue_id}}</td>
       <td>{{item.venue_name}}</td>
       <td>{{item.venue_address}}</td>
-      <td>{{item.fk_city_id}}</td>
+      <td>{{item.city_name}}</td>
       <td>{{item.pincode}}</td>
       
       <td>          

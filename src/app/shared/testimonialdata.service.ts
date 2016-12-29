@@ -8,6 +8,8 @@ export class TestimonialdataService {
 
 
   private url:string="http://localhost:3000/testimonial/";
+  private url1:string="http://localhost:3000/test/";
+
   constructor(private _http:Http,) { }
   getAllTestimonial()
   {
@@ -21,5 +23,10 @@ export class TestimonialdataService {
     let req=new RequestOptions({headers:headers});
     return this._http.delete(this.url+Id,req); 
   }
-
+  getAllTestimonialJoin()
+  {
+    return this._http.get(this.url1).map(
+      (res:Response)=>res.json()
+    );
+  }
 }
