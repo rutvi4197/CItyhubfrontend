@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http,RequestOptions,Headers ,Response} from '@angular/http';
+<<<<<<< HEAD
 import { Userclass } from './userclass';
+=======
+>>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
 import 'rxjs/Rx';
 
 @Injectable()

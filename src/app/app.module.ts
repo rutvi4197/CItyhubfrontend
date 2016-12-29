@@ -36,6 +36,10 @@ import { UserTblComponent } from './user-tbl/user-tbl.component';
 import { WalletdataService } from './shared/walletdata.service';
 import { UserdataService } from './shared/userdata.service';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +61,12 @@ import { UserdataService } from './shared/userdata.service';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
+<<<<<<< HEAD
     UserTblComponent
     
+=======
+    UserTblComponent    
+>>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
   ],
   imports: [
     BrowserModule,

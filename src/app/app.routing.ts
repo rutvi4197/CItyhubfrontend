@@ -31,13 +31,17 @@ const router:Routes=[
     {path:'addcat',component:AddcatComponent},
     {path:'editcat/:id',component:EditcatComponent},
     {path:'allpay',component:PaymentTblComponent},
-    {path:'alltest',component:TestimonialTblComponent},
+    {path:'allreview',component:TestimonialTblComponent},
     {path:'allvenue',component:VenueTblComponent},
     {path:'alluser',component:UserTblComponent},
+<<<<<<< HEAD
     {path:'allwallet',component:WalletTblComponent},
     {path:'bookevent/:id',component:BookTblComponent},
     {path:'allusers',component:UserTblComponent},
      {path:'alltestimonial',component:TestimonialTblComponent}
+=======
+    {path:'allwallet',component:WalletTblComponent}   
+>>>>>>> ac686fd21d8f43d923c5e57dee4ef335580ecd1b
 ];
 
 export const routing=RouterModule.forRoot(router);
