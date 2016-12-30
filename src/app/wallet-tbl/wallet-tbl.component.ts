@@ -18,7 +18,7 @@ walarr:Walletclass[]=[];
   }
 
   ngOnInit() {
-    this._waldata.getAllWallet().subscribe(
+    this._waldata.getAllWalletJoin().subscribe(
       (data:Walletclass[])=>{
         this.walarr=data;
       },

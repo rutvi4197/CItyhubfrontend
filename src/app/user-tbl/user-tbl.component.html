@@ -1,3 +1,39 @@
-<p>
-  user-tbl works!
-</p>
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div class="col-md-9">
+ <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>User Table</b></h1>
+    <table class="table table-striped" style="font-size: 20px;text-align: center" >
+
+    <thead style="color:blue; font-size: 25px;">
+      <tr>
+      <th style="text-align: center">Email ID</th>
+      <th style="text-align: center">Mobile No.</th>
+      <th style="text-align: center">Name</th>
+      <th style="text-align: center">City</th>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: center">Action</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of userarr ">
+      <tr style="background-color: lightgray">
+      <td>{{item.pk_email_id}}</td>
+      <td>{{item.user_mobile_no}}</td>
+      <td>{{item.user_name}}</td>
+      <td>{{item.city_name}}</td>
+      <td>{{item.user_type}}</td>
+    
+      <td>          
+        <button (click)="deleteUser(item)" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+      </td>
+     </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

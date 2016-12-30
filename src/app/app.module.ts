@@ -13,7 +13,7 @@ import { EditcityComponent } from './city-tbl/editcity.component';
 import { AnsTblComponent } from './ans-tbl/ans-tbl.component';
 import { AnsdataService } from './shared/ansdata.service';
 import { BookTblComponent } from './book-tbl/book-tbl.component';
-import {  BookdataService } from './shared/bookdata.service';
+import { BookdataService } from './shared/bookdata.service';
 import { EventQueTblComponent } from './event-que-tbl/event-que-tbl.component';
 import { EventQuedataService } from './shared/event-quedata.service';
 import { EventComponent } from './event/event.component';
@@ -40,7 +40,6 @@ import { OfferdataService } from './shared/offerdata.service';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,11 +61,16 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
+<<<<<<< HEAD
     UserTblComponent,
     OfferTblComponent,
     AddofferComponent,
     UpdateofferComponent    
   ],
+=======
+    UserTblComponent
+    ],
+>>>>>>> 95a783183156ac5db39be097dbf763686eded474
   imports: [
     BrowserModule,
     FormsModule,
@@ -75,8 +79,12 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
   ],
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
+<<<<<<< HEAD
   VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService,
   OfferdataService],
+=======
+  UserdataService,VenuedataService,WalletdataService,LikedataService],
+>>>>>>> 95a783183156ac5db39be097dbf763686eded474
   bootstrap: [AppComponent]
 })
 export class AppModule { }

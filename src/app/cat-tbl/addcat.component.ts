@@ -24,7 +24,7 @@ export class AddcatComponent implements OnInit {
     this._catdata.addCat(new Catclass(this.pk_cat_id,this.cat_name))
     .subscribe(
       (data:any)=>{
-         this._router.navigate(['/allcity']);
+         this._router.navigate(['/allcat']);
       },
       function(error){},
       function()

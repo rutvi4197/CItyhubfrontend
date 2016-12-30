@@ -17,7 +17,7 @@ venuearr:Venueclass[]=[];
   }
 
   ngOnInit() {
-    this._testdata.getAllVenue().subscribe(
+    this._testdata.getAllVenueJoin().subscribe(
       (data:Venueclass[])=>{
         this.venuearr=data;
       },

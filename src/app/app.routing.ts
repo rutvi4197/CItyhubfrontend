@@ -38,9 +38,16 @@ const router:Routes=[
     {path:'allvenue',component:VenueTblComponent},
     {path:'alluser',component:UserTblComponent},
     {path:'allwallet',component:WalletTblComponent},
+<<<<<<< HEAD
     {path:'alloffer',component:OfferTblComponent},
     {path:'addoffer',component:AddofferComponent},
     {path:'editoffer/:id',component:UpdateofferComponent}
+=======
+    {path:'bookevent/:id',component:BookTblComponent},
+    {path:'allusers',component:UserTblComponent},
+    {path:'alltestimonial',component:TestimonialTblComponent},
+    {path:'allwallet',component:WalletTblComponent}   
+>>>>>>> 95a783183156ac5db39be097dbf763686eded474
 ];
 
 export const routing=RouterModule.forRoot(router);
