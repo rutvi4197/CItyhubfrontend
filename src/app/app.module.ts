@@ -35,6 +35,10 @@ import { WalletTblComponent } from './wallet-tbl/wallet-tbl.component';
 import { UserTblComponent } from './user-tbl/user-tbl.component';
 import { WalletdataService } from './shared/walletdata.service';
 import { UserdataService } from './shared/userdata.service';
+import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
+import { OfferdataService } from './shared/offerdata.service';
+import { AddofferComponent } from './offer-tbl/addoffer.component';
+import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
 
 
 @NgModule({
@@ -58,7 +62,10 @@ import { UserdataService } from './shared/userdata.service';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
-    UserTblComponent    
+    UserTblComponent,
+    OfferTblComponent,
+    AddofferComponent,
+    UpdateofferComponent    
   ],
   imports: [
     BrowserModule,
@@ -68,7 +75,8 @@ import { UserdataService } from './shared/userdata.service';
   ],
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
-  VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService],
+  VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService,
+  OfferdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

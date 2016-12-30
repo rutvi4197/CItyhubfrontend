@@ -10,16 +10,14 @@
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>
-      <th style="text-align: center">Event Id </th>
       <th style="text-align: center">Event Name</th>
-      <th style="text-align: center">Event Desc</th>
-      <th style="text-align: center">Event Price</th>
+      <th style="text-align: center">Event Like</th>
+      <th style="text-align: center">Event Dislike</th>
       
       </tr>
     </thead>
     <tbody *ngFor="let item of likearr ">
       <tr style="background-color: lightgray">
-         <td>{{item.pk_event_id}}</td>
       <td>{{item.event_name}}</td>
       <td>{{item.likecnt}}</td>
       <td>{{item.dislikecnt}}</td>
