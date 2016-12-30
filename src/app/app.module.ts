@@ -61,16 +61,12 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
     TestimonialTblComponent,
     VenueTblComponent,
     WalletTblComponent,
-<<<<<<< HEAD
     UserTblComponent,
     OfferTblComponent,
     AddofferComponent,
     UpdateofferComponent    
   ],
-=======
-    UserTblComponent
-    ],
->>>>>>> 95a783183156ac5db39be097dbf763686eded474
+    
   imports: [
     BrowserModule,
     FormsModule,
@@ -79,12 +75,8 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
   ],
   providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
-<<<<<<< HEAD
   VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService,
   OfferdataService],
-=======
-  UserdataService,VenuedataService,WalletdataService,LikedataService],
->>>>>>> 95a783183156ac5db39be097dbf763686eded474
   bootstrap: [AppComponent]
 })
 export class AppModule { }
