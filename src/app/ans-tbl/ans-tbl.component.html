@@ -13,6 +13,7 @@
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>
+      <th style="text-align: center">Event Name</th>
       <th style="text-align: center">Que des</th>
       <th style="text-align: center">Ans des</th>
       <th style="text-align: center">User Name</th>
@@ -21,6 +22,7 @@
     </thead>
     <tbody>
      <tr style="background-color: lightgray" *ngFor="let item of (ansarr | anspipe:input1.value) ">
+      <td>{{item.event_name}}</td>
       <td>{{item.que_desc}}</td>
       <td>{{item.ans_desc}}</td>  
       <td>{{item.user_name}}</td>
