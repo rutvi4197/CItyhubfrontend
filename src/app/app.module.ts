@@ -39,6 +39,9 @@ import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
 import { OfferdataService } from './shared/offerdata.service';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
+import { CityfilterPipe } from './city-tbl/cityfilter.pipe';
+import { EventfilterPipe } from './event/eventfilter.pipe';
+import { UserpipePipe } from './user-tbl/userpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
     UserTblComponent,
     OfferTblComponent,
     AddofferComponent,
-    UpdateofferComponent    
+    UpdateofferComponent,
+    CityfilterPipe,
+    EventfilterPipe,
+    UserpipePipe    
   ],
     
   imports: [
