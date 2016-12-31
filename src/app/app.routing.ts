@@ -19,6 +19,7 @@ import { LikeTblComponent } from './like-tbl/like-tbl.component';
 import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
+import { ReapproveComponent } from './event/reapprove.component';
 const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
     {path:'allcity',component:CityTblComponent},
@@ -41,7 +42,8 @@ const router:Routes=[
     {path:'alloffer',component:OfferTblComponent},
     {path:'addoffer',component:AddofferComponent},
     {path:'editoffer/:id',component:UpdateofferComponent},
-    {path:'allusers',component:UserTblComponent}   
+    {path:'allusers',component:UserTblComponent},
+    {path:'allreapprove',component:ReapproveComponent}
 
 ];
 

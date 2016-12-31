@@ -6,11 +6,20 @@ import 'rxjs/Rx';
 export class EventdataService {
 public url:string="http://localhost:3000/approvevent/";
 public url1:string="http://localhost:3000/event/";
+public url2:string="http://localhost:3000/disapprovedetails/";
+
   constructor(private _http:Http) { }
   getforapprove()
   {
     console.log("hello from services");
     return this._http.get(this.url).map(
+      (res:Response)=>res.json()
+    );
+  }
+  getDisEvent()
+  {
+    console.log("hello from services");
+    return this._http.get(this.url2).map(
       (res:Response)=>res.json()
     );
   }
@@ -33,7 +42,7 @@ updateflag(item:Eventclass)
 {
   let header=new Headers({'Content-Type':'application/json'});
   let req=new RequestOptions({headers:header});
-  return this._http.delete(this.url+Id,req);
+  return this._http.delete(this.url1+Id,req);
  
 }
 

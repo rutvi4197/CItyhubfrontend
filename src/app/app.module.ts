@@ -39,7 +39,7 @@ import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
 import { OfferdataService } from './shared/offerdata.service';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
-
+import { ReapproveComponent } from './event/reapprove.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +64,8 @@ import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
     UserTblComponent,
     OfferTblComponent,
     AddofferComponent,
-    UpdateofferComponent    
+    UpdateofferComponent,
+    ReapproveComponent
   ],
     
   imports: [

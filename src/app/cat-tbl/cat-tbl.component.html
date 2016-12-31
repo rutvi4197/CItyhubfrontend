@@ -7,6 +7,8 @@
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Category Table</b></h1>
     <br>
    <button (click)="addCat()" type="button" style="height: 40px; width: 40px; background-color:lightblue"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+  <input type="text" (keyup)="0" #input1 placeholder="Search for..">
+    
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>
@@ -15,8 +17,8 @@
       <th style="text-align: center">Action</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of catarr ">
-      <tr style="background-color: lightgray">
+    <tbody>
+      <tr *ngFor="let item of (catarr | catfiler:input1.value)">
    
       <td>{{item.cat_name}}</td>  <td><button (click)="updateCat(item)" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
