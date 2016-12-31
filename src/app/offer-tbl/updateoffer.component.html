@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-9">
     <br><br><br>
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add Offer </b></h1>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Update Offer </b></h1>
     <form (ngSubmit)='editoffer()' #addform="ngForm">
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Email Id</span>
@@ -13,6 +13,7 @@
 <div [hidden]="emailid.valid" class="alert alert-danger">
   Email Id   is required
 </div>
+<br>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Price</span>
   <input name="price"  #price='ngModel' [(ngModel)]="offer_price" type="number" class="form-control" placeholder="Enter Offer Price"  required>
@@ -20,6 +21,7 @@
 <div [hidden]="price.valid" class="alert alert-danger">
   Offer price   is required
 </div>
+<br>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Promocode</span>
   <input name="promocode"  #promocode='ngModel' [(ngModel)]="offer_promocode" type="text" class="form-control" placeholder="Enter Offer Promocode"  required>
@@ -27,6 +29,7 @@
 <div [hidden]="promocode.valid" class="alert alert-danger">
   Offer Promocode   is required
 </div>
+<br>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Photo</span>
   <input name="photo"  #photo='ngModel' [(ngModel)]="offer_photo" type="text" class="form-control" placeholder="Enter Offer Photo"  required>
@@ -34,6 +37,7 @@
 <div [hidden]="photo.valid" class="alert alert-danger">
   Offer photo   is required
 </div>
+<br>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Event id</span>
   <input name="event_id"  #event='ngModel' [(ngModel)]="fk_event_id" type="number" class="form-control" placeholder="Enter EVent Id"  required>
@@ -41,7 +45,7 @@
 <div [hidden]="event.valid" class="alert alert-danger">
   Event_id  is required
 </div>
-
+<br>
 <Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
 
 </form>

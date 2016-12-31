@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-9">
     <br><br><br>
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add Offer </b></h1>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add new  Offer </b></h1>
     <form (ngSubmit)='addoffer()' #addform="ngForm">
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Email Id</span>
@@ -13,10 +13,12 @@
 <div [hidden]="emailid.valid" class="alert alert-danger">
   Email Id   is required
 </div>
+<br>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Price</span>
   <input name="price"  #price='ngModel' [(ngModel)]="offerarr.offer_price" type="number" class="form-control" placeholder="Enter Offer Price"  required>
 </div>
+<br>
 <div [hidden]="price.valid" class="alert alert-danger">
   Offer price   is required
 </div>
@@ -24,6 +26,7 @@
   <span class="input-group-addon" id="sizing-addon1">Offer Promocode</span>
   <input name="promocode"  #promocode='ngModel' [(ngModel)]="offerarr.offer_promocode" type="text" class="form-control" placeholder="Enter Offer Promocode"  required>
 </div>
+<br>
 <div [hidden]="promocode.valid" class="alert alert-danger">
   Offer Promocode   is required
 </div>
@@ -31,6 +34,7 @@
   <span class="input-group-addon" id="sizing-addon1">Offer Photo</span>
   <input name="photo"  #photo='ngModel' [(ngModel)]="offerarr.offer_photo" type="text" class="form-control" placeholder="Enter Offer Photo"  required>
 </div>
+<br>
 <div [hidden]="photo.valid" class="alert alert-danger">
   Offer photo   is required
 </div>
