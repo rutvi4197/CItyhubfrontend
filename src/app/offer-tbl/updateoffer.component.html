@@ -1,3 +1,51 @@
-<p>
-  updateoffer works!
-</p>
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add Offer </b></h1>
+    <form (ngSubmit)='editoffer()' #addform="ngForm">
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Email Id</span>
+  <input name="emailid"  #emailid='ngModel' [(ngModel)]="fk_email_id" type="text" class="form-control" placeholder="Enter Your Email id"  required>
+</div>
+<div [hidden]="emailid.valid" class="alert alert-danger">
+  Email Id   is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer Price</span>
+  <input name="price"  #price='ngModel' [(ngModel)]="offer_price" type="number" class="form-control" placeholder="Enter Offer Price"  required>
+</div>
+<div [hidden]="price.valid" class="alert alert-danger">
+  Offer price   is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer Promocode</span>
+  <input name="promocode"  #promocode='ngModel' [(ngModel)]="offer_promocode" type="text" class="form-control" placeholder="Enter Offer Promocode"  required>
+</div>
+<div [hidden]="promocode.valid" class="alert alert-danger">
+  Offer Promocode   is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer Photo</span>
+  <input name="photo"  #photo='ngModel' [(ngModel)]="offer_photo" type="text" class="form-control" placeholder="Enter Offer Photo"  required>
+</div>
+<div [hidden]="photo.valid" class="alert alert-danger">
+  Offer photo   is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer Event id</span>
+  <input name="event_id"  #event='ngModel' [(ngModel)]="fk_event_id" type="number" class="form-control" placeholder="Enter EVent Id"  required>
+</div>
+<div [hidden]="event.valid" class="alert alert-danger">
+  Event_id  is required
+</div>
+
+<Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
+
+</form>
+  </div>
+</div>
+
+

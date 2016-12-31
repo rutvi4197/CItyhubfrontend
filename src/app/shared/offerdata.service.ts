@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http,Response,RequestOptions,Headers} from '@angular/http';
 import { Offerclass } from './offerclass';
+import { Offermainclass } from './offermainclass';
 import 'rxjs/Rx';
 
 @Injectable()
