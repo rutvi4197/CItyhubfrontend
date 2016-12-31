@@ -10,6 +10,8 @@ import { CitydataService } from '../shared/citydata.service';
 })
 export class CityTblComponent implements OnInit {
 public cityarr:Cityclass[]=[];
+public delarr:Cityclass[]=[];
+i:number=0;
   constructor(private _citydataservice:CitydataService,private _router:Router) { }
 
   ngOnInit() {
@@ -26,6 +28,22 @@ public cityarr:Cityclass[]=[];
         console.log("successfully get");
       }
     );
+  }
+  flag=0;
+  addarr(item:Cityclass)
+  {
+    for(this.i=0;this.i<this.delarr.length;this.i++)
+    {
+      if(item.pk_city_id==this.delarr[this.i].pk_city_id)
+      {
+          this.flag=1;
+          this.delarr.splice(this.delarr.indexOf(item),1);
+      }
+    }
+    if(this.flag=0)
+    {
+      this.delarr.push(item);
+    }
   }
   addcity()
   {
@@ -49,6 +67,11 @@ public cityarr:Cityclass[]=[];
       console.log("delete successfully");
     }
     );
+  }
+  deleteall()
+  {
+  
+    console.log(this.delarr);
   }
 
 }
