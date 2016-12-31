@@ -26,7 +26,7 @@ constructor(private _http:Http,) { }
   { 
     let headers=new Headers({'Content-Type':'application/json'});
     let req=new RequestOptions({headers:headers});
-    return this._http.delete(this.url+'Id',req); 
+    return this._http.delete(this.url+Id,req); 
   }
 
 }

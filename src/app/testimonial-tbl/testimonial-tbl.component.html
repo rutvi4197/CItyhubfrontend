@@ -7,6 +7,9 @@
 
      <br><br><br>
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Testimonial Table</b></h1>
+     <div style="text-align:right;">
+     <input  #input1 type="text" (keyup)="0"  placeholder="Search For.."/>
+    </div>
     <br><br>
    <!--<button (click)="addCat()" type="button" style="height: 40px; width: 40px; background-color:palegreen"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>-->
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
@@ -20,8 +23,8 @@
       </tr>
     </thead>
 
-    <tbody *ngFor="let item of testarr ">
-      <tr style="background-color: lightgray">
+    <tbody>
+      <tr style="background-color: lightgray" *ngFor="let item of (testarr | testpipe:input1.value) ">
       <td>{{item.user_name}}</td>
       <td>{{item.review_desc}}</td>
       <td>{{item.review_like}}</td>

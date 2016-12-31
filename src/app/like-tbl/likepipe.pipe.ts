@@ -1,14 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'cityfilter'
+  name: 'likepipe'
 })
-export class CityfilterPipe implements PipeTransform {
-  city:any[]=[];
+export class LikepipePipe implements PipeTransform {
+
+ like:any[]=[];
     transform(value: any[], args: any): any {
       if(args!='')
       {
-      return this.city=value.filter(res=>res.city_name.startsWith(args));
+      return this.like=value.filter(res=>res.event_name.startsWith(args));
       }
       else{
         return value;

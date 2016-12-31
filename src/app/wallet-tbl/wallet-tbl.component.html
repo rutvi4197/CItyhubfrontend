@@ -8,6 +8,9 @@
  <br><br><br>
 
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Wallet Table</b></h1>
+    <div style="text-align:right;">
+     <input  #input1 type="text" (keyup)="0"  placeholder="Search For.."/>
+    </div>
    <table class="table table-striped" style="font-size: 20px;text-align: center" >
 
     <thead style="color:blue; font-size: 25px;">
@@ -19,8 +22,8 @@
       </tr>
     </thead>
 
-    <tbody *ngFor="let item of walarr ">
-      <tr style="background-color: lightgray">
+    <tbody>
+      <tr style="background-color: lightgray" *ngFor="let item of (walarr | walletpipe:input1.value) ">
       <td>{{item.pk_wallet_id}}</td>
       <td>{{item.user_name}}</td>
       <td>{{item.wallet_amnt}}</td>

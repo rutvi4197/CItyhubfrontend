@@ -39,14 +39,17 @@ import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
 import { OfferdataService } from './shared/offerdata.service';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
-<<<<<<< HEAD
 import { ReapproveComponent } from './event/reapprove.component';
-=======
 import { CityfilterPipe } from './city-tbl/cityfilter.pipe';
 import { EventfilterPipe } from './event/eventfilter.pipe';
 import { UserpipePipe } from './user-tbl/userpipe.pipe';
-
->>>>>>> 97e5804a9845696f5b66ac34c03e9d1bb47ac980
+import { CatfilterPipe } from './cat-tbl/catfilter.pipe';
+import { TestpipePipe } from './testimonial-tbl/testpipe.pipe';
+import { WalletpipePipe } from './wallet-tbl/walletpipe.pipe';
+import { OfferpipePipe } from './offer-tbl/offerpipe.pipe';
+import { LikepipePipe } from './like-tbl/likepipe.pipe';
+import { QuepipePipe } from './event-que-tbl/quepipe.pipe';
+import { AnspipePipe } from './ans-tbl/anspipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,13 +75,17 @@ import { UserpipePipe } from './user-tbl/userpipe.pipe';
     OfferTblComponent,
     AddofferComponent,
     UpdateofferComponent,
-<<<<<<< HEAD
-    ReapproveComponent
-=======
+    ReapproveComponent,
     CityfilterPipe,
+    UserpipePipe,
     EventfilterPipe,
-    UserpipePipe    
->>>>>>> 97e5804a9845696f5b66ac34c03e9d1bb47ac980
+    CatfilterPipe,
+    TestpipePipe,
+    WalletpipePipe,
+    OfferpipePipe,
+    LikepipePipe,
+    QuepipePipe,
+    AnspipePipe,
   ],
     
   imports: [
