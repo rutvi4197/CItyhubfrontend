@@ -31,5 +31,27 @@ public eventarr:Eventclass[]=[];
   {
     this._router.navigate(['/bookevent',item.pk_event_id]);
   }
+addevent()
+{
+  this._router.navigate(['/addevent']);
+}
+editevent(item:Eventclass)
+{
+  this._router.navigate(['/editevent',item.pk_event_id]);
+}
+  deletecity(item:Eventclass){
+    this._Dataservice.deleteEvent(item.pk_event_id).subscribe(
+    (data:any)=>{
+      this.eventarr.splice(this.eventarr.indexOf(item),1);
+    },
+    function(error)
+    {
 
+    },
+    function()
+    {
+      alert("delete successfully");
+    }
+    );
+  }
 }

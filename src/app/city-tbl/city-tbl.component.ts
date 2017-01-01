@@ -29,7 +29,7 @@ i:number=0;
       }
     );
   }
-  flag=0;
+ 
   addarr(item:Cityclass)
   {
     if(this.delarr.find(x=>x==item))
