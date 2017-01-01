@@ -50,6 +50,8 @@ import { OfferpipePipe } from './offer-tbl/offerpipe.pipe';
 import { LikepipePipe } from './like-tbl/likepipe.pipe';
 import { QuepipePipe } from './event-que-tbl/quepipe.pipe';
 import { AnspipePipe } from './ans-tbl/anspipe.pipe';
+import { AdduserComponent } from './user-tbl/adduser.component';
+import { EdituserComponent } from './user-tbl/edituser.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +88,8 @@ import { AnspipePipe } from './ans-tbl/anspipe.pipe';
     LikepipePipe,
     QuepipePipe,
     AnspipePipe,
+    AdduserComponent,
+    EdituserComponent,
   ],
     
   imports: [

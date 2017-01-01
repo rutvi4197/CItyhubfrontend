@@ -39,4 +39,13 @@ export class CatdataService {
     let req=new RequestOptions({headers:headers});
     return this._http.put(this.url+item.pk_cat_id,body,req).map((res:Response)=>res.json()); 
   }
+  deleteallcat(item:Catclass[])
+  {
+    let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let req=new RequestOptions({headers:header});
+    return this._http.post(this.url+1,body,req).map(
+      (res:Response)=>res.json()    
+    );
+  }
 }

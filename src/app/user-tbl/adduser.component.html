@@ -1,0 +1,78 @@
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add User </b></h1>
+    <form (ngSubmit)='addUser()' #addform="ngForm">
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Email ID</span>
+  <input name="idd" #idd='ngModel' [(ngModel)]="pk_email_id" type="text" class="form-control" placeholder="Enter Email Id"  required>
+</div>
+
+<br>
+<div [hidden]="idd.valid || idd.pristine" class="alert alert-danger">
+  User Email ID  is required
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">User Password</span>
+  <input name="ps" #ps='ngModel' [(ngModel)]="user_password" type="text" class="form-control" placeholder="Enter User name"  required>
+</div>
+
+<br>
+<div [hidden]="ps.valid || ps.pristine" class="alert alert-danger">
+  User name  is required
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">User Mobile Number</span>
+  <input name="mb" #mb='ngModel' [(ngModel)]="user_mobile_no" type="text" class="form-control" placeholder="Enter Mobile Number"  required>
+</div>
+
+<br>
+<div [hidden]="mb.valid || mb.pristine" class="alert alert-danger">
+  User Mobile Number  is required
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">User name</span>
+  <input name="name" #name='ngModel' [(ngModel)]="user_name" type="text" class="form-control" placeholder="Enter User name"  required>
+</div>
+
+<br>
+<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+  User name  is required
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">City name</span>
+  <select name="pk_city_id" #city='ngModel' [(ngModel)]="pk_city_id" >
+    <option *ngFor="let c of cityarr" [value]="c.pk_city_id" selected>{{c.city_name}}</option>
+  </select>
+</div>
+
+<br>
+<div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+  City name  is required
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">User Type</span>
+  <input name="type" #type='ngModel' [(ngModel)]="user_type" type="text" class="form-control" placeholder="Enter User Type"  required>
+</div>
+
+<br>
+<div [hidden]="type.valid || type.pristine" class="alert alert-danger">
+  User Type  is required
+</div>
+
+
+<Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
+
+</form>
+  </div>
+</div>
