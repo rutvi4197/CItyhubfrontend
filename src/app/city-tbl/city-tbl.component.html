@@ -9,8 +9,10 @@
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>City Table</b></h1>
    <button (click)="addcity()" type="button" style="height: 40px; width: 40px; background-color:lightblue"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
   
-<input #input1 type="text" (keyup)="0" placeholder="Search For.."/>
-  <table class="table table-striped" style="font-size: 20px;text-align: center" >
+   <div style="text-align:right;">
+     <input  #input1 type="text" (keyup)="0"  placeholder="Search For.."/>
+    </div>
+    <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>
         <th style="text-align: center"><button (click)="deleteall()" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">

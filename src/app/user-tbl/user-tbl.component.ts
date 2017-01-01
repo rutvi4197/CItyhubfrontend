@@ -32,7 +32,15 @@ export class UserTblComponent implements OnInit {
       }
     );
   }
-  
+  addUser()
+  {
+    this._router.navigate(['/adduser']);
+  }
+  updateUser(item:Userclass)
+  {
+    this._router.navigate(['/edituser',item.pk_email_id]);
+  }
+
   deleteUser(item:Userclass)
   {
     this._userdata.deleteUser(item.pk_email_id).subscribe(

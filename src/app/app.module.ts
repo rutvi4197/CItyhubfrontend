@@ -50,10 +50,15 @@ import { OfferpipePipe } from './offer-tbl/offerpipe.pipe';
 import { LikepipePipe } from './like-tbl/likepipe.pipe';
 import { QuepipePipe } from './event-que-tbl/quepipe.pipe';
 import { AnspipePipe } from './ans-tbl/anspipe.pipe';
+<<<<<<< HEAD
 import { AddwalletComponent } from './wallet-tbl/addwallet.component';
 import { EditwalletComponent } from './wallet-tbl/editwallet.component';
 import { AddeventComponent } from './event/addevent.component';
 import { EditeventComponent } from './event/editevent.component';
+=======
+import { AdduserComponent } from './user-tbl/adduser.component';
+import { EdituserComponent } from './user-tbl/edituser.component';
+>>>>>>> b4e212454b3a27d209227be1e8f037d2718fb82a
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,10 +95,15 @@ import { EditeventComponent } from './event/editevent.component';
     LikepipePipe,
     QuepipePipe,
     AnspipePipe,
+<<<<<<< HEAD
     AddwalletComponent,
     EditwalletComponent,
     AddeventComponent,
     EditeventComponent,
+=======
+    AdduserComponent,
+    EdituserComponent,
+>>>>>>> b4e212454b3a27d209227be1e8f037d2718fb82a
   ],
     
   imports: [
