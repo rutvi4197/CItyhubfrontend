@@ -32,16 +32,11 @@ i:number=0;
   flag=0;
   addarr(item:Cityclass)
   {
-    for(this.i=0;this.i<this.delarr.length;this.i++)
+    if(this.delarr.find(x=>x==item))
     {
-      if(item.pk_city_id==this.delarr[this.i].pk_city_id)
-      {
-          this.flag=1;
-          this.delarr.splice(this.delarr.indexOf(item),1);
-      }
+      this.delarr.splice(this.delarr.indexOf(item),1);
     }
-    if(this.flag=0)
-    {
+    else{
       this.delarr.push(item);
     }
   }
@@ -70,8 +65,27 @@ i:number=0;
   }
   deleteall()
   {
+    console.log("Deleteall");
+  this._citydataservice.deleteallcity(this.delarr).subscribe(
+      (data:Cityclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.cityarr.find(x=>x==this.cityarr[this.i]))
+            {
+              this.cityarr.splice(this.cityarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        console.log("successfully delete");
+      }
+    );
   
-    console.log(this.delarr);
   }
 
 }
