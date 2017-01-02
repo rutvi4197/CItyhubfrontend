@@ -26,16 +26,12 @@ import { AddeventComponent } from './event/addevent.component';
 import { EditeventComponent } from './event/editevent.component';
 import { AdduserComponent } from './user-tbl/adduser.component';
 import { EdituserComponent } from './user-tbl/edituser.component';
-<<<<<<< HEAD
 import { UpdatevenueComponent } from './venue-tbl/updatevenue.component';
 import { AddvenueComponent } from './venue-tbl/addvenue.component';
 import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
-=======
 import { EditlikeComponent } from './like-tbl/editlike.component';
 import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent} from './event-que-tbl/editque.component';
-
->>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
 const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
     {path:'allcity',component:CityTblComponent},
@@ -66,15 +62,13 @@ const router:Routes=[
     {path:'editevent/:id',component:EditeventComponent},
     {path:'adduser',component:AdduserComponent},
     {path:'edituser/:id',component:EdituserComponent},
-<<<<<<< HEAD
     {path:'addvenue',component:AddvenueComponent},
     {path:'editvenue/:id',component:UpdatevenueComponent},
-    {path:'edittestimonial/:id',component:UpdatetestComponent}
-=======
+    {path:'edittestimonial/:id',component:UpdatetestComponent},
     {path:'editlike/:id',component:EditlikeComponent},
     {path:'addque',component:AddqueComponent},
     {path:'editque/:id',component:EditqueComponent}
->>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
+
 
 ];
 

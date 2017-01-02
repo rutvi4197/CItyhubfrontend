@@ -50,7 +50,7 @@ public url1:string="http://localhost:3000/ans/";
   let body=JSON.stringify(item);
   let header=new Headers({'Content-Type':'application/json'});
   let req=new RequestOptions({headers:header});
-  return this._http.post(this.url+1,body,req).map(
+  return this._http.post(this.url1+1,body,req).map(
     (res:Response)=>res.json()
     
   );

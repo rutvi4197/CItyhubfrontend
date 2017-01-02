@@ -46,7 +46,7 @@ i:number;
   
   deleteall()
   {
-    console.log("Deleteall");
+  
   this._venuedata.deleteallvenue(this.delarr).subscribe(
       (data:Venueclass[])=>{
           for(this.i=0;this.i<this.delarr.length;this.i++)
