@@ -5,11 +5,15 @@
   </div>
   <div class="col-md-9">
     <br><br><br>
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Ans  Table</b></h1>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Answer details</b></h1>
     <div style="text-align:right;">
      <input  #input1 type="text" (keyup)="0"  placeholder="Search For.."/>
     </div>
-   
+    <div class="jumbotron">
+  <h3>Question :: {{que_desc}}</h3>
+  <p>Event Name :: {{event_name}}</p>
+  <p>User Name :: {{user_name}}</p>
+</div>
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>

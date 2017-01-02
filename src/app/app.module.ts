@@ -50,12 +50,24 @@ import { OfferpipePipe } from './offer-tbl/offerpipe.pipe';
 import { LikepipePipe } from './like-tbl/likepipe.pipe';
 import { QuepipePipe } from './event-que-tbl/quepipe.pipe';
 import { AnspipePipe } from './ans-tbl/anspipe.pipe';
+import { AddwalletComponent } from './wallet-tbl/addwallet.component';
+import { EditwalletComponent } from './wallet-tbl/editwallet.component';
+import { AddeventComponent } from './event/addevent.component';
+import { EditeventComponent } from './event/editevent.component';
 import { AdduserComponent } from './user-tbl/adduser.component';
 import { EdituserComponent } from './user-tbl/edituser.component';
+<<<<<<< HEAD
 import { AddvenueComponent } from './venue-tbl/addvenue.component';
 import { UpdatevenueComponent } from './venue-tbl/updatevenue.component';
 import { VenuepipePipe } from './venue-tbl/venuepipe.pipe';
 import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
+=======
+import { AddlikeComponent } from './like-tbl/addlike.component';
+import { EditlikeComponent } from './like-tbl/editlike.component';
+import { AddqueComponent } from './event-que-tbl/addque.component';
+import { EditqueComponent } from './event-que-tbl/editque.component';
+
+>>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,12 +104,23 @@ import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
     LikepipePipe,
     QuepipePipe,
     AnspipePipe,
+    AddwalletComponent,
+    EditwalletComponent,
+    AddeventComponent,
+    EditeventComponent,
     AdduserComponent,
     EdituserComponent,
+<<<<<<< HEAD
     AddvenueComponent,
     UpdatevenueComponent,
     VenuepipePipe,
     UpdatetestComponent,
+=======
+    AddlikeComponent,
+    EditlikeComponent,
+    AddqueComponent,
+    EditqueComponent,
+>>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
   ],
     
   imports: [

@@ -20,17 +20,28 @@ import { OfferTblComponent } from './offer-tbl/offer-tbl.component';
 import { AddofferComponent } from './offer-tbl/addoffer.component';
 import { UpdateofferComponent } from './offer-tbl/updateoffer.component';
 import { ReapproveComponent } from './event/reapprove.component';
+import { AddwalletComponent } from './wallet-tbl/addwallet.component';
+import { EditwalletComponent } from './wallet-tbl/editwallet.component';
+import { AddeventComponent } from './event/addevent.component';
+import { EditeventComponent } from './event/editevent.component';
 import { AdduserComponent } from './user-tbl/adduser.component';
 import { EdituserComponent } from './user-tbl/edituser.component';
+<<<<<<< HEAD
 import { UpdatevenueComponent } from './venue-tbl/updatevenue.component';
 import { AddvenueComponent } from './venue-tbl/addvenue.component';
 import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
+=======
+import { EditlikeComponent } from './like-tbl/editlike.component';
+import { AddqueComponent } from './event-que-tbl/addque.component';
+import { EditqueComponent} from './event-que-tbl/editque.component';
+
+>>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
 const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
     {path:'allcity',component:CityTblComponent},
     {path:'addcity',component:AddcityComponent},
     {path:'editcity/:id',component:EditcityComponent},
-    {path:'allans',component:AnsTblComponent},
+    {path:'allans/:id',component:AnsTblComponent},
     {path:'allque',component:EventQueTblComponent},
     {path:'approve',component:ApproveComponent},
     {path:'allevent',component:EventComponent},
@@ -49,11 +60,21 @@ const router:Routes=[
     {path:'editoffer/:id',component:UpdateofferComponent},
     {path:'allusers',component:UserTblComponent},
     {path:'allreapprove',component:ReapproveComponent},
+    {path:'addwallet',component:AddwalletComponent},
+    {path:'editwallet/:id',component:EditwalletComponent},
+    {path:'addevent',component:AddeventComponent},
+    {path:'editevent/:id',component:EditeventComponent},
     {path:'adduser',component:AdduserComponent},
     {path:'edituser/:id',component:EdituserComponent},
+<<<<<<< HEAD
     {path:'addvenue',component:AddvenueComponent},
     {path:'editvenue/:id',component:UpdatevenueComponent},
     {path:'edittestimonial/:id',component:UpdatetestComponent}
+=======
+    {path:'editlike/:id',component:EditlikeComponent},
+    {path:'addque',component:AddqueComponent},
+    {path:'editque/:id',component:EditqueComponent}
+>>>>>>> 113a02bf315a37ce204420041e784a497a7b43f7
 
 ];
 

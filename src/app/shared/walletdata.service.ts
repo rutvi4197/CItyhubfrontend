@@ -10,9 +10,9 @@ export class WalletdataService {
   private url:string="http://localhost:3000/wallet/";
   private url1:string="http://localhost:3000/walletdetails/";
 
- getAllWallet()
+ getwalletbyid(id:number)
   {
-    return this._http.get(this.url).map(
+    return this._http.get(this.url+id).map(
       (res:Response)=>res.json()
     );
   }
@@ -22,4 +22,37 @@ export class WalletdataService {
       (res:Response)=>res.json()
     );
   }
+  addwallet(item:Walletclass)
+  {
+      let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+    return this._http.post(this.url,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
+  editwallet(item:Walletclass)
+  {
+      let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+    return this._http.put(this.url+item.pk_wallet_id,body,option).map(
+      (res:Response)=>res.json()  
+    );
+  }
+  deleteallwallet(item:Walletclass[])
+  {
+      let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+    return this._http.post(this.url+0,body,option).map(
+      (res:Response)=>res.json()  
+    );
+  }
+  deletewallet(id:number)
+{
+  let header=new Headers({'Content-Type':'application/json'});
+  let req=new RequestOptions({headers:header});
+  return this._http.delete(this.url+id,req);
+}
 }

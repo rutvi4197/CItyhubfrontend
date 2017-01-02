@@ -20,4 +20,39 @@ public url1:string="http://localhost:3000/ans/";
   let req=new RequestOptions({headers:header});
   return this._http.delete(this.url1+Id,req);
 }
+  getAnsbyId(id:number)
+  {
+    return this._http.get(this.url1+id).map(
+      (res:Response)=>res.json()
+    );
+  }
+   editans(item:Ansclass)
+  {
+    let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+   return this._http.put(this.url1+item.pk_ans_id,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
+  addans(item:Ansclass)
+  {
+      let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+    return this._http.post(this.url1,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
+
+  deleteallans(item:Ansclass[])
+{
+  let body=JSON.stringify(item);
+  let header=new Headers({'Content-Type':'application/json'});
+  let req=new RequestOptions({headers:header});
+  return this._http.post(this.url+1,body,req).map(
+    (res:Response)=>res.json()
+    
+  );
+}
 }

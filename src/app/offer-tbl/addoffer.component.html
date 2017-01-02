@@ -23,6 +23,14 @@
   Offer price   is required
 </div>
 <div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer Name</span>
+  <input name="name"  #name='ngModel' [(ngModel)]="offerarr.offer_name" type="text" class="form-control" placeholder="Enter Offer Name"  required>
+</div>
+<br>
+<div [hidden]="name.valid" class="alert alert-danger">
+  Offer name   is required
+</div>
+<div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Promocode</span>
   <input name="promocode"  #promocode='ngModel' [(ngModel)]="offerarr.offer_promocode" type="text" class="form-control" placeholder="Enter Offer Promocode"  required>
 </div>
@@ -36,6 +44,14 @@
 </div>
 <br>
 <div [hidden]="photo.valid" class="alert alert-danger">
+  Offer photo   is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event Id</span>
+  <input name="eventid"  #eventid='ngModel' [(ngModel)]="offerarr.fk_event_id" type="number" class="form-control" placeholder="Enter Event id"  required>
+</div>
+<br>
+<div [hidden]="eventid.valid" class="alert alert-danger">
   Offer photo   is required
 </div>
 

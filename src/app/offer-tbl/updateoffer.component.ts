@@ -17,6 +17,7 @@ public offer_photo:string;
 public offer_promocode:string;
 public offer_price:number;
 public fk_event_id:number;
+public offer_name:string;
 public user_name:string="";
 public event_name:string="";
   constructor(private _dataservice:OfferdataService,private _router:Router,private _acrouter:ActivatedRoute) { }
@@ -35,6 +36,7 @@ public event_name:string="";
         this.offer_photo=this.offerarr[0].offer_photo;
         this.offer_promocode=this.offerarr[0].offer_promocode;
         this.offer_price=this.offerarr[0].offer_price;
+        this.offer_name=this.offerarr[0].offer_name;
       },
       function(error)
       {
@@ -50,7 +52,7 @@ public event_name:string="";
 editoffer()
 {
   this._dataservice.editoffer(new Offerclass(this.offer_id,this.fk_email_id,this.offer_price,this.offer_promocode,this.offer_photo,
-  this.fk_event_id,this.user_name,this.event_name)).subscribe(
+  this.fk_event_id,this.offer_name,this.user_name,this.event_name)).subscribe(
     (data:any)=>
     {
       this._router.navigate(['/alloffer']);
