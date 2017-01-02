@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Testimonialclass } from '../shared/testimonialclass';
 import { TestimonialdataService } from '../shared/testimonialdata.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-testimonial-tbl',
@@ -8,10 +9,10 @@ import { TestimonialdataService } from '../shared/testimonialdata.service';
   styleUrls: ['./testimonial-tbl.component.css']
 })
 export class TestimonialTblComponent implements OnInit {
-
+i:number;
 testarr:Testimonialclass[]=[];
-
-  constructor(private _testdata:TestimonialdataService)
+delarr:Testimonialclass[]=[];
+  constructor(private _testdata:TestimonialdataService,private _router:Router)
    {
 
   }
@@ -30,6 +31,44 @@ testarr:Testimonialclass[]=[];
         console.log("All Display done");
       }
     );
+  }
+ addarr(item:Testimonialclass)
+  {
+    if(this.delarr.find(x=>x==item))
+    {
+      this.delarr.splice(this.delarr.indexOf(item),1);
+    }
+    else{
+      this.delarr.push(item);
+    }
+  }
+  updateTestimonial(item:Testimonialclass)
+  {
+    this._router.navigate(['/edittestimonial',item.pk_review_id]);
+  }
+   deleteall()
+  {
+    console.log("Deleteall");
+  this._testdata.deleteAllTestimonial(this.delarr).subscribe(
+      (data:Testimonialclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.testarr.find(x=>x==this.testarr[this.i]))
+            {
+              this.testarr.splice(this.testarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        console.log("successfully delete");
+      }
+    );
+  
   }
 
   deleteTestimonial(item:Testimonialclass)

@@ -52,6 +52,10 @@ import { QuepipePipe } from './event-que-tbl/quepipe.pipe';
 import { AnspipePipe } from './ans-tbl/anspipe.pipe';
 import { AdduserComponent } from './user-tbl/adduser.component';
 import { EdituserComponent } from './user-tbl/edituser.component';
+import { AddvenueComponent } from './venue-tbl/addvenue.component';
+import { UpdatevenueComponent } from './venue-tbl/updatevenue.component';
+import { VenuepipePipe } from './venue-tbl/venuepipe.pipe';
+import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,6 +94,10 @@ import { EdituserComponent } from './user-tbl/edituser.component';
     AnspipePipe,
     AdduserComponent,
     EdituserComponent,
+    AddvenueComponent,
+    UpdatevenueComponent,
+    VenuepipePipe,
+    UpdatetestComponent,
   ],
     
   imports: [

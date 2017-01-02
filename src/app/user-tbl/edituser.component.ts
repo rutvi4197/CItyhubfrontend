@@ -17,7 +17,7 @@ public pk_email_id:string='';
 public user_password:string;
 public user_mobile_no:string;
 public user_name:string;
-public pk_city_id:number;
+public fk_city_id:number;
 public user_type:string;
 
   constructor(private _userdataservice:UserdataService,private _router:Router,private _acrouter:ActivatedRoute ) { }
@@ -46,7 +46,7 @@ public user_type:string;
         this.user_mobile_no=this.userarr[0].user_mobile_no;
         this.user_name=this.userarr[0].user_name;
         this.user_type=this.userarr[0].user_type;
-        this.pk_city_id=this.userarr[0].fk_city_id;
+        this.fk_city_id=this.userarr[0].fk_city_id;
       
     },
       function(error)
@@ -61,7 +61,7 @@ public user_type:string;
   }
 updateUser()
 {
-  this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.pk_city_id,this.user_type)).subscribe(
+  this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.fk_city_id,this.user_type)).subscribe(
     (data:any)=>
     {
       this._router.navigate(['/alluser']);

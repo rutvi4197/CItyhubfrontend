@@ -17,6 +17,12 @@ export class TestimonialdataService {
       (res:Response)=>res.json()
     );
   }
+  getTestimonialById(id:number)
+  {
+    return this._http.get(this.url+id).map(
+      (res:Response)=>res.json()
+    );
+  }
   deleteTestimonial(Id:number)
   { 
     let headers=new Headers({'Content-Type':'application/json'});
@@ -29,4 +35,24 @@ export class TestimonialdataService {
       (res:Response)=>res.json()
     );
   }
+   deleteAllTestimonial(item:Testimonialclass[])
+{
+  let body=JSON.stringify(item);
+  let header=new Headers({'Content-Type':'application/json'});
+  let req=new RequestOptions({headers:header});
+  return this._http.post(this.url+1,body,req).map(
+    (res:Response)=>res.json()
+    
+  );
+}
+  updateTestimonial(item:Testimonialclass)
+  {
+    let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+   return this._http.put(this.url+item.pk_review_id,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
+  
 }
