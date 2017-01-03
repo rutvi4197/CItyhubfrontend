@@ -18,7 +18,7 @@ public pk_que_id:number;
 public que_desc:string;
 public event_name:string;
 public user_name:string;
-
+public fk_event_id:number;
 public delarr:Ansclass[]=[];
 i:number;
   constructor(private _dataservice:AnsdataService,private _eventdata:EventQuedataService,private _acrouter:ActivatedRoute,private _router:Router) { }
@@ -36,6 +36,7 @@ i:number;
         this.que_desc=this.quearr[0].que_desc;
         this.event_name=this.quearr[0].event_name;
         this.user_name=this.quearr[0].user_name;
+        this.fk_event_id=this.quearr[0].fk_event_id;
       },
       function(error)
       {
@@ -62,7 +63,7 @@ i:number;
   }
   addAns()
   {
-    this._router.navigate(['/addans']);
+    this._router.navigate(['/addans',this.pk_que_id,this.fk_event_id]);
   }
   updateAns(item:Ansclass)
   {
