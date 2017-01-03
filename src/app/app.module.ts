@@ -63,8 +63,8 @@ import { AddlikeComponent } from './like-tbl/addlike.component';
 import { EditlikeComponent } from './like-tbl/editlike.component';
 import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent } from './event-que-tbl/editque.component';
-
-
+import { AddansComponent } from './ans-tbl/addans.component';
+import { EditansComponent } from './ans-tbl/editans.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -113,7 +113,10 @@ import { EditqueComponent } from './event-que-tbl/editque.component';
     AddlikeComponent,
     EditlikeComponent,
     AddqueComponent,
-    EditqueComponent
+    EditqueComponent,
+    AddansComponent,
+    EditansComponent
+   
   ],
     
   imports: [
