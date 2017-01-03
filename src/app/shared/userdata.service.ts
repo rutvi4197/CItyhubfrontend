@@ -38,6 +38,15 @@ constructor(private _http:Http,) { }
       (res:Response)=>res.json()
     );
   }
+   deletealluser(item:Userclass[])
+  {
+    let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+   return this._http.post(this.url+0,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
   addUser(item:Userclass)
   {
       let body=JSON.stringify(item);

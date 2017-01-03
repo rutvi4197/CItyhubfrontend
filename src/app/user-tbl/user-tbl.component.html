@@ -15,6 +15,9 @@
 
     <thead style="color:blue; font-size: 25px;">
       <tr>
+         <th style="text-align: center"><button (click)="deleteall()" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
+                            Delete All
+         </button></th>
       <th style="text-align: center">Email ID</th>
       <th style="text-align: center">Mobile No.</th>
       <th style="text-align: center">Name</th>
@@ -26,6 +29,7 @@
 
     <tbody >
       <tr style="background-color: lightgray" *ngFor="let item of (userarr | userpipe:input1.value) ">
+        <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.pk_email_id}}</td>
       <td>{{item.user_mobile_no}}</td>
       <td>{{item.user_name}}</td>

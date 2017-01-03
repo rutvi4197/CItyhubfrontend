@@ -34,7 +34,7 @@
 
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">City name</span>
-  <select name="pk_city_id" #city='ngModel' [(ngModel)]="pk_city_id" >
+  <select name="pk_city_id" #city='ngModel' [(ngModel)]="pk_city_id" class="form-class" >
     <option *ngFor="let c of cityarr" [value]="c.pk_city_id" selected>{{c.city_name}}</option>
   </select>
 </div>

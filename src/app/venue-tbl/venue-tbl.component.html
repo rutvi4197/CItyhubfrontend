@@ -32,7 +32,7 @@
 
     <tbody>
       <tr style="background-color: lightgray" *ngFor="let item of (venuearr | venuepipe:input1.value) ">
-       <td><input type="checkbox" (change)="addarr(item)"></td>
+      <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.pk_venue_id}}</td>
       <td>{{item.venue_name}}</td>
       <td>{{item.venue_address}}</td>

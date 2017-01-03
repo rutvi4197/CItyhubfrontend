@@ -14,6 +14,9 @@
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     <thead style="color:blue; font-size: 25px;">
       <tr>
+        <th style="text-align: center"><button (click)="deleteall()" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
+                            Delete All
+         </button></th>
       <th style="text-align: center">Event Name</th>
       <th style="text-align: center">User name</th>
       <th style="text-align: center">Offer Promocode</th>
@@ -24,6 +27,7 @@
     </thead>
     <tbody>
      <tr style="background-color: lightgray" *ngFor="let item of (offerarr | offerpipe:input1.value) ">
+        <td><input type="checkbox" (change)="addarr(item)"></td>
        <td>{{item.event_name}}</td>
       <td>{{item.user_name}}</td>
       <td>{{item.offer_promocode}}</td>

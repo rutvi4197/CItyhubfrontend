@@ -18,6 +18,9 @@ public pk_que_id:number;
 public que_desc:string;
 public event_name:string;
 public user_name:string;
+
+public delarr:Ansclass[]=[];
+i:number;
   constructor(private _dataservice:AnsdataService,private _eventdata:EventQuedataService,private _acrouter:ActivatedRoute,private _router:Router) { }
 
   ngOnInit() {
@@ -43,7 +46,7 @@ public user_name:string;
         console.log("Ans get");
       }
     );
-    this._dataservice.getAllAns().subscribe(
+    this._dataservice.getAnsbyId(this.pk_que_id).subscribe(
       (data:Ansclass[])=>{
         this.ansarr=data;
       },
@@ -81,5 +84,37 @@ public user_name:string;
     }
     );
   }
-
+   addarr(item:Ansclass)
+  {
+    if(this.delarr.find(x=>x==item))
+    {
+      this.delarr.splice(this.delarr.indexOf(item),1);
+    }
+    else{
+      this.delarr.push(item);
+    }
+  }
+  deleteall()
+  {
+      this._dataservice.deleteallans(this.delarr).subscribe(
+      (data:Ansclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.ansarr.find(x=>x==this.ansarr[this.i]))
+            {
+              this.ansarr.splice(this.ansarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        console.log("successfully delete");
+      }
+    );
+  
+  }
 }

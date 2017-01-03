@@ -72,7 +72,8 @@ const router:Routes=[
     {path:'addque',component:AddqueComponent},
     {path:'editque/:id',component:EditqueComponent},
     {path:'addans',component:AddansComponent},
-    {path:'editans/:id',component:EditansComponent}
+    {path:'editans/:id',component:EditansComponent},
+    {path:'editque/:id',component:EditqueComponent}
 
 ];
 

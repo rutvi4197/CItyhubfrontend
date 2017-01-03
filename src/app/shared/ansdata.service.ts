@@ -6,6 +6,7 @@ import 'rxjs/Rx';
 export class AnsdataService {
 public url:string="http://localhost:3000/ansdetails/";
 public url1:string="http://localhost:3000/ans/";
+public url2:string="http://localhost:3000/ansget/";
 
   constructor(private _http:Http) { }
  getAllAns()
@@ -14,6 +15,13 @@ public url1:string="http://localhost:3000/ans/";
       (res:Response)=>res.json()
     );
   }
+  ansGetById(Id:number)
+  {
+    return this._http.get(this.url2+Id).map(
+      (res:Response)=>res.json()
+    );
+  }
+ 
  deleteans(Id:number)
 {
   let header=new Headers({'Content-Type':'application/json'});
@@ -50,7 +58,7 @@ public url1:string="http://localhost:3000/ans/";
   let body=JSON.stringify(item);
   let header=new Headers({'Content-Type':'application/json'});
   let req=new RequestOptions({headers:header});
-  return this._http.post(this.url+1,body,req).map(
+  return this._http.post(this.url1+1,body,req).map(
     (res:Response)=>res.json()
     
   );

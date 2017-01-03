@@ -12,6 +12,8 @@
     </div>
     <div class="jumbotron">
   <h3>Question :: {{que_desc}}</h3>
+  <div class="jumbotron">
+  <h3 style="color: red">Question :: {{que_desc}}</h3>
   <p>Event Name :: {{event_name}}</p>
   <p>User Name :: {{user_name}}</p>
 </div>
@@ -21,17 +23,17 @@
     
     <thead style="color:blue; font-size: 25px;">
       <tr>
-      <th style="text-align: center">Event Name</th>
-      <th style="text-align: center">Que des</th>
+      <th style="text-align: center"><button (click)="deleteall()" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
+                            Delete All
+         </button></th>
       <th style="text-align: center">Ans des</th>
       <th style="text-align: center">User Name</th>
       <th style="text-align: center">Action</th>
       </tr>
     </thead>
     <tbody>
-     <tr style="background-color: lightgray" *ngFor="let item of (ansarr | anspipe:input1.value) ">
-      <td>{{item.event_name}}</td>
-      <td>{{item.que_desc}}</td>
+     <tr style="background-color: lightgray" *ngFor="let item of ansarr ">
+       <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.ans_desc}}</td>  
       <td>{{item.user_name}}</td>
       <td>

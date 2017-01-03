@@ -41,9 +41,8 @@ this._Dataservice.updateflag(item).subscribe(
 );
 }
 
-disfinalevent(item:Eventclass){
+deleteevent(item:Eventclass){
 
- // item.flag=3;
     this._Dataservice.deleteEvent(item.pk_event_id).subscribe(
     (data:any)=>{
       this.eventarr.splice(this.eventarr.indexOf(item),1);
