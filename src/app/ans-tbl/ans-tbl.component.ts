@@ -18,7 +18,7 @@ public pk_que_id:number;
 public que_desc:string;
 public event_name:string;
 public user_name:string;
-  constructor(private _dataservice:AnsdataService,private _eventdata:EventQuedataService,private _acrouter:ActivatedRoute) { }
+  constructor(private _dataservice:AnsdataService,private _eventdata:EventQuedataService,private _acrouter:ActivatedRoute,private _router:Router) { }
 
   ngOnInit() {
       this._subscription=this._acrouter.params.subscribe(
@@ -56,6 +56,14 @@ public user_name:string;
         console.log("Ans get");
       }
     );
+  }
+  addAns()
+  {
+    this._router.navigate(['/addans']);
+  }
+  updateAns(item:Ansclass)
+  {
+    this._router.navigate(['/editans',item.pk_ans_id]);
   }
   deleteans(item:Ansclass)
   {
