@@ -9,6 +9,8 @@ import { EventdataService } from '../shared/eventdata.service';
 export class ApproveComponent implements OnInit {
 public eventarr:Eventclass[]=[];
 public flag:number;
+delarr:Eventclass[]=[];
+i:number;
   constructor(private _Dataservice:EventdataService) { }
 
   ngOnInit() {
@@ -46,4 +48,39 @@ this._Dataservice.updateflag(item).subscribe(
 );
   
 }
+addarr(item:Eventclass)
+  {
+    if(this.delarr.find(x=>x==item))
+    {
+      item.flag=0;
+      this.delarr.splice(this.delarr.indexOf(item),1);
+    }
+    else{
+      item.flag=1;
+      this.delarr.push(item);
+    }
+  }
+   approveall()
+  {
+  this._Dataservice.approveall(this.delarr).subscribe(
+      (data:Eventclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.eventarr.find(x=>x==this.eventarr[this.i]))
+            {
+              this.eventarr.splice(this.eventarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        console.log("successfully delete");
+      }
+    );
+  
+  }
 }

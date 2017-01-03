@@ -77,6 +77,15 @@ updateflag(item:Eventclass)
       (res:Response)=>res.json()
     );
   }
+   approveall(item:Eventclass[])
+  {
+    let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+   return this._http.post(this.url+0,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
   addevent(item:Eventclass)
   {
       let body=JSON.stringify(item);

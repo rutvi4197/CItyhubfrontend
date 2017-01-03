@@ -40,18 +40,18 @@ i:number;
   }
   deleteque(item:EventQueTbl)
   {
+    console.log("In delete");
     this._dataservice.deleteQue(item.pk_que_id).subscribe(
     (data:any)=>{
       this.quearr.splice(this.quearr.indexOf(item),1);
     },
     function(error)
     {
-
+        console.log(error);
     },
     function()
     {
-       alert("deleted");
-   }
+    }
     );
   }
   addarr(item:EventQueTbl)
