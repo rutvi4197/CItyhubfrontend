@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-tbl.component.css']
 })
 export class UserTblComponent implements OnInit {
-
+delarr:Userclass[]=[];
+i:number;
  userarr:Userclass[]=[];
 
   constructor(private _userdata:UserdataService,private _router:Router)
@@ -31,6 +32,40 @@ export class UserTblComponent implements OnInit {
         console.log("All Display done");
       }
     );
+  }
+   deleteall()
+  {
+    console.log("Deleteall");
+  this._userdata.deletealluser(this.delarr).subscribe(
+      (data:Userclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.userarr.find(x=>x==this.userarr[this.i]))
+            {
+              this.userarr.splice(this.userarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        alert("successfully delete");
+      }
+    );
+  
+  }
+  addarr(item:Userclass)
+  {
+    if(this.delarr.find(x=>x==item))
+    {
+      this.delarr.splice(this.delarr.indexOf(item),1);
+    }
+    else{
+      this.delarr.push(item);
+    }
   }
   addUser()
   {

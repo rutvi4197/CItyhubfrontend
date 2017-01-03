@@ -4,12 +4,12 @@
   </div>
   <div class="col-md-9">
     <br><br><br>
-    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add User </b></h1>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add Venue </b></h1>
     <form (ngSubmit)='addVenue()' #addform="ngForm">
 
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Venue Name</span>
-  <input name="name" #name='ngModel' [(ngModel)]="venue_name" type="text" class="form-control" placeholder="Enter Email Id"  required>
+  <input name="name" #name='ngModel' [(ngModel)]="venue_name" type="text" class="form-control" placeholder="Enter Venue name"  required>
 </div>
 
 <br>
@@ -19,7 +19,7 @@
 
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Venue Address</span>
-  <input name="add" #add='ngModel' [(ngModel)]="venue_address" type="text" class="form-control" placeholder="Enter User name"  required>
+  <input name="add" #add='ngModel' [(ngModel)]="venue_address" type="text" class="form-control" placeholder="Enter Venue Address"  required>
 </div>
 
 <br>
@@ -30,7 +30,7 @@
 
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Pincode</span>
-  <input name="pc" #pc='ngModel' [(ngModel)]="pincode" type="text" class="form-control" placeholder="Enter Mobile Number"  required>
+  <input name="pc" #pc='ngModel' [(ngModel)]="pincode" type="number" class="form-control" placeholder="Enter Pincode"  required>
 </div>
 
 <br>

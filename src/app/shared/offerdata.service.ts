@@ -38,6 +38,15 @@ getAllOffer()
       (res:Response)=>res.json()
     );
   }
+  deletealloffer(item:Offerclass[])
+  {
+      let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+    return this._http.post(this.url+0,body,option).map(
+      (res:Response)=>res.json()
+    );
+  }
 
   deleteoffer(Id:number)
 {

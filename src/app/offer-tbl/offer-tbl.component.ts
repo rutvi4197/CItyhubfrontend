@@ -10,6 +10,8 @@ import { OfferdataService } from '../shared/offerdata.service';
 })
 export class OfferTblComponent implements OnInit {
 public offerarr:Offerclass[]=[];
+delarr:Offerclass[]=[];
+i:number;
   constructor(private _dataservice:OfferdataService,private _router:Router) { }
 
   ngOnInit() {
@@ -19,6 +21,41 @@ public offerarr:Offerclass[]=[];
       }
     );
   }
+   addarr(item:Offerclass)
+  {
+    if(this.delarr.find(x=>x==item))
+    {
+      this.delarr.splice(this.delarr.indexOf(item),1);
+    }
+    else{
+      this.delarr.push(item);
+    }
+  }
+   deleteall()
+  {
+    console.log("Deleteall");
+  this._dataservice.deletealloffer(this.delarr).subscribe(
+      (data:Offerclass[])=>{
+          for(this.i=0;this.i<this.delarr.length;this.i++)
+          {
+            if(this.offerarr.find(x=>x==this.offerarr[this.i]))
+            {
+              this.offerarr.splice(this.offerarr.indexOf(this.delarr[this.i]),1);
+            }
+          }
+      },
+      function(error)
+      {
+        console.log(error);
+      },
+      function()
+      {
+        console.log("successfully delete");
+      }
+    );
+  
+  }
+
   addoffer()
   {
     this._router.navigate(['/addoffer']);

@@ -33,7 +33,7 @@ i:number;
       }
     );
   }
-  addarr(item:Venueclass)
+addarr(item:Venueclass)
   {
     if(this.delarr.find(x=>x==item))
     {
@@ -43,10 +43,9 @@ i:number;
       this.delarr.push(item);
     }
   }
-  
-  deleteall()
+   deleteall()
   {
-  
+    console.log("Deleteall");
   this._venuedata.deleteallvenue(this.delarr).subscribe(
       (data:Venueclass[])=>{
           for(this.i=0;this.i<this.delarr.length;this.i++)
@@ -63,12 +62,13 @@ i:number;
       },
       function()
       {
-        console.log("successfully delete");
+        alert("successfully delete");
       }
     );
   
   }
 
+ 
   addVenue()
   {
     this._router.navigate(['/addvenue']);
