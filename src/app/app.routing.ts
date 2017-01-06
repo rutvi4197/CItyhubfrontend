@@ -32,7 +32,7 @@ import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
 import { EditlikeComponent } from './like-tbl/editlike.component';
 import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent} from './event-que-tbl/editque.component';
-import { AddansComponent } from './ans-tbl/addans.component';
+import { AddansComponent} from './ans-tbl/addans.component';
 import { EditansComponent } from './ans-tbl/editans.component';
 
 const router:Routes=[   
@@ -72,8 +72,7 @@ const router:Routes=[
     {path:'addque',component:AddqueComponent},
     {path:'editque/:id',component:EditqueComponent},
     {path:'addans/:id/:eventid',component:AddansComponent},
-    {path:'editans/:id',component:EditansComponent},
-    {path:'editque/:id',component:EditqueComponent}
+    {path:'editans/:id',component:EditansComponent}
 
 ];
 

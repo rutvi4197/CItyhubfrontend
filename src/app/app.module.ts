@@ -2,6 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+
+import { PaginatePipe } from './ng2paging/paginate.pipe';
+import { PaginationService } from './ng2paging/pagination.service';
+import { PaginationControlsComponent } from './ng2paging/pagination-controls.component';
+import { PaginationControlsDirective } from './ng2paging/pagination-controls.directive';
+import { PaginationInstance } from './ng2paging/pagination-instance';
+
+
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar.component';
 import { CityTblComponent } from './city-tbl/city-tbl.component';
@@ -115,7 +124,10 @@ import { EditansComponent } from './ans-tbl/editans.component';
     AddqueComponent,
     EditqueComponent,
     AddansComponent,
-    EditansComponent
+    EditansComponent,
+    PaginatePipe,
+    PaginationControlsComponent,
+    PaginationControlsDirective
    
   ],
     
@@ -125,7 +137,7 @@ import { EditansComponent } from './ans-tbl/editans.component';
     HttpModule,
     routing
   ],
-  providers: [CitydataService,AnsdataService,BookdataService,EventQuedataService,
+  providers: [PaginationService,CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
   VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService,
   OfferdataService],

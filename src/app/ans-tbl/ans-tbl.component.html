@@ -11,20 +11,15 @@
      <input  #input1 type="text" (keyup)="0"  placeholder="Search For.."/>
     </div>
     <div class="jumbotron">
-  <h3>Question :: {{que_desc}}</h3>
-  <div class="jumbotron">
       <hr>
   <h3 style="color: red">Question :: {{que_desc}}</h3>
   <p>Event Name :: {{event_name}}</p>
   <p>User Name :: {{user_name}}</p>
   <hr>
 </div>
-<<<<<<< HEAD
 
-=======
 <button (click)="addAns()" type="button" style="height: 40px; width: 40px; background-color:lightblue"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-  
->>>>>>> f2493861a1ccafd898c20b4687503ebca0b7d028
+
   <table class="table table-striped" style="font-size: 20px;text-align: center" >
     
     <thead style="color:blue; font-size: 25px;">
@@ -39,7 +34,7 @@
       </tr>
     </thead>
     <tbody>
-     <tr style="background-color: lightgray" *ngFor="let item of ansarr ">
+     <tr style="background-color: lightgray" *ngFor="let item of (ansarr  |anspipe:input1.value |paginate: { itemsPerPage: 2, currentPage: page }  )">
        <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.ans_desc}}</td>  
       <td>{{item.ans_date}}</td> 
@@ -56,5 +51,8 @@
      </tr>
     </tbody>
   </table>
+  <div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   </div>
 </div>
