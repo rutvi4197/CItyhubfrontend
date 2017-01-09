@@ -1,0 +1,37 @@
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h3 style="color: red">Add Your Comment Here</h3>
+    <div class="input-group input-group-lg">
+   <span class="input-group-addon" >Comment</span>
+  <textarea  rows="4" cols="100"  placeholder="Comment description"  [(ngModel)]="ans_desc">
+  </textarea>
+</div><br>
+<div style="text-align: right">
+<Button type="button" (click)="addcomment()" class="btn btn-primary"  name="ADD">Add your comment</Button>
+</div>
+<br>
+<h3 style="color: red; text-align: center" >All Comment </h3>
+<br><br>
+    <div class="alert alert-info" role="alert" *ngFor="let item of commentarr">
+    <div class="media" style="color: black" >
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="C:\Users\User\Pictures\thank.jpg" alt="..." height="100" width="100" >
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{item.user_name}}</h4>
+   {{item.comment_desc}}
+   <p style="text-align: right "> <span class="glyphicon glyphicon-time"></span>{{item.comment_date}}</p>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+

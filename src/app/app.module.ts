@@ -74,6 +74,8 @@ import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent } from './event-que-tbl/editque.component';
 import { AddansComponent } from './ans-tbl/addans.component';
 import { EditansComponent } from './ans-tbl/editans.component';
+import { CommentdataService } from './shared/commentdata.service';
+import { CommentComponent } from './comment/comment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -127,7 +129,8 @@ import { EditansComponent } from './ans-tbl/editans.component';
     EditansComponent,
     PaginatePipe,
     PaginationControlsComponent,
-    PaginationControlsDirective
+    PaginationControlsDirective,
+    CommentComponent
    
   ],
     
@@ -140,7 +143,7 @@ import { EditansComponent } from './ans-tbl/editans.component';
   providers: [PaginationService,CitydataService,AnsdataService,BookdataService,EventQuedataService,
   EventdataService,CatdataService,PaymentdataService,TestimonialdataService,
   VenuedataService,UserdataService,VenuedataService,WalletdataService,LikedataService,
-  OfferdataService],
+  OfferdataService,CommentdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

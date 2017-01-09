@@ -34,6 +34,7 @@ import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent} from './event-que-tbl/editque.component';
 import { AddansComponent} from './ans-tbl/addans.component';
 import { EditansComponent } from './ans-tbl/editans.component';
+import { CommentComponent } from './comment/comment.component';
 
 const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
@@ -72,7 +73,8 @@ const router:Routes=[
     {path:'addque',component:AddqueComponent},
     {path:'editque/:id',component:EditqueComponent},
     {path:'addans/:id/:eventid',component:AddansComponent},
-    {path:'editans/:id',component:EditansComponent}
+    {path:'editans/:id',component:EditansComponent},
+    {path:'comment/:id',component:CommentComponent}
 
 ];
 

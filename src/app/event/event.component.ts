@@ -43,6 +43,10 @@ i:number=0;
   {
     this._router.navigate(['/bookevent',item.pk_event_id]);
   }
+  comment(item:Eventclass)
+  {
+    this._router.navigate(['/comment',item.pk_event_id]);
+  }
 addevent()
 {
   this._router.navigate(['/addevent']);

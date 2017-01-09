@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Eventclass } from '../shared/eventclass';
+import { Emailid } from '../shared/emailid';
 import { EventdataService } from '../shared/eventdata.service';
 @Component({
   selector: 'app-approve',
@@ -9,11 +10,13 @@ import { EventdataService } from '../shared/eventdata.service';
 export class ApproveComponent implements OnInit {
 public eventarr:Eventclass[]=[];
 public flag:number;
+email:Emailid;
 delarr:Eventclass[]=[];
 i:number;
   constructor(private _Dataservice:EventdataService) { }
 
   ngOnInit() {
+  // console.log(this.email.email_id);
     this._Dataservice.getforapprove().subscribe(
       (data:Eventclass[])=>{
           this.eventarr=data;

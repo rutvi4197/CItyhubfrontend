@@ -70,13 +70,7 @@
 <div [hidden]="cat.valid || cat.pristine" class="alert alert-danger">
   Cat name  is required
 </div><br>
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon1">Email Id</span>
-  <input name="emailid" #emailid='ngModel' [(ngModel)]="eventarr.fk_email_id" type="email" class="form-control" placeholder="Enter your Email id"  required>
-</div>
-<div [hidden]="emailid.valid " class="alert alert-danger">
-  Email id is required
-</div><br>
+
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer  name</span>
   <select name="pk_offer_id" #offer='ngModel' [(ngModel)]="pk_offer_id" class="form-control">

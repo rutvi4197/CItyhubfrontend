@@ -61,7 +61,7 @@ public user_type:string;
   }
 updateUser()
 {
-  this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.fk_city_id,this.user_type)).subscribe(
+  this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.fk_city_id,this.user_type,'')).subscribe(
     (data:any)=>
     {
       this._router.navigate(['/alluser']);
