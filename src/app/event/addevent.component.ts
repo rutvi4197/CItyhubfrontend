@@ -17,6 +17,7 @@ public offerarr:Offerclass[]=[];
 pk_cat_id:number;
 pk_offer_id:number;
 email:string="shahritu2111@gmail.com";
+<<<<<<< HEAD
 path='';
    public file_srcs: string[] = [];
   public debug_size_before: string[] = [];
@@ -107,6 +108,9 @@ resize(img, MAX_WIDTH:number, MAX_HEIGHT:number, callback){
 }
  
   constructor(private _eventdata:EventdataService,private _router:Router,private changeDetectorRef: ChangeDetectorRef) { }
+=======
+  constructor(private _eventdata:EventdataService,private _router:Router) { }
+>>>>>>> aca104daf1eb93c56e5f4163338933880abc6368
 
   ngOnInit() {
     //console.log(this.email.email_id);
