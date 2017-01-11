@@ -40,6 +40,8 @@ flag:number;
       (data:Eventclass[])=>{
         this.eventarr=data;
         this.event_name=this.eventarr[0].event_name;
+        console.log(this.event_id);
+        console.log(this.event_name);
          this.event_logo=this.eventarr[0].event_logo;
          this.event_des=this.eventarr[0].event_des;
           this.event_slogan=this.eventarr[0].event_slogan;

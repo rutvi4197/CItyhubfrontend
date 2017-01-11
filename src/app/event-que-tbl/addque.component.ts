@@ -10,7 +10,7 @@ import { Eventclass } from '../shared/eventclass';
   styles: []
 })
 export class AddqueComponent implements OnInit {
-public quearr:EventQueTbl=new EventQueTbl(0,'',0,'','','','','','',0,'','');
+public quearr:EventQueTbl=new EventQueTbl(0,'shahritu2111@gmail.com',0,'','','','','','',0,'','');
 public eventarr:Eventclass[]=[];
 public pk_event_id:number;
   constructor(private _dataservice:EventQuedataService,private _router:Router) { }
@@ -19,6 +19,7 @@ public pk_event_id:number;
   this._dataservice.getAllEvent().subscribe(
       (data:any)=>{
         this.eventarr=data;
+        this.pk_event_id=this.eventarr[0].pk_event_id;
 },
 function(error){
   console.log(error);

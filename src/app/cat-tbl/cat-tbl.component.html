@@ -22,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-    <tr style="background-color: lightgray" *ngFor="let item of (catarr | catfilter:input1.value) ">
+    <tr style="background-color: lightgray" *ngFor="let item of (catarr | catfilter:input1.value |paginate: { itemsPerPage: 2, currentPage: page }) ">
         <td><input type="checkbox" (change)="addarr(item)"></td>
      
       <td>{{item.cat_name}}</td>  <td><button (click)="updateCat(item)" style="background-color: lightblue" type="button" class="btn btn-default" aria-label="Left Align">
@@ -35,5 +35,8 @@
      </tr>
     </tbody>
   </table>
+    <div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   </div>
 </div>

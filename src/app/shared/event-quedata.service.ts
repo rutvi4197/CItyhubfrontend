@@ -8,6 +8,7 @@ public url:string="http://localhost:3000/quedetails/";
 public url1:string="http://localhost:3000/deleteallans/";
 public url2:string="http://localhost:3000/event_que/";
 public eventurl:string="http://localhost:3000/event/";
+public ansurl:string="http://localhost:3000/ansget/";
   constructor(private _http:Http) { }
     getAllEvent()
   {
@@ -48,7 +49,7 @@ deleteAns(Id:number)
 {
   let header=new Headers({'Content-Type':'application/json'});
   let req=new RequestOptions({headers:header});
- return this._http.delete(this.url1+Id,req);
+ return this._http.delete(this.ansurl+Id,req);
 }
  editque(item:EventQueTbl)
   {

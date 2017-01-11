@@ -24,7 +24,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr style="background-color: lightgray" *ngFor="let item of (quearr | quepipe:input1.value) ">
+        <tr style="background-color: lightgray" *ngFor="let item of (quearr | quepipe:input1.value |paginate: { itemsPerPage: 2, currentPage: page }) ">
           <td><input type="checkbox" (change)="addarr(item)"></td>
   <td>{{item.event_name}}</td>
       <td>{{item.que_desc}}</td>  
@@ -42,5 +42,8 @@
      </tr>
     </tbody>
   </table>
+<div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   </div>
 </div>

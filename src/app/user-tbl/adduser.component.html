@@ -9,7 +9,7 @@
 
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Email ID</span>
-  <input name="idd" #idd='ngModel' [(ngModel)]="pk_email_id" type="text" class="form-control" placeholder="Enter Email Id"  required>
+  <input name="idd" #idd='ngModel' [(ngModel)]="pk_email_id" type="email" class="form-control" placeholder="Enter Email Id"  required>
 </div>
 
 <br>
@@ -59,7 +59,10 @@
 <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
   City name  is required
 </div>
-
+<div>  
+  <input type="file"  (change)="fileChange(input)" #input />
+</div> 
+ <img [attr.src]='file_srcs[0]' alt=""/>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">User Type</span>
   <input name="type" #type='ngModel' [(ngModel)]="user_type" type="text" class="form-control" placeholder="Enter User Type"  required>

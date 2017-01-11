@@ -27,7 +27,7 @@
     </thead>
 
     <tbody>
-      <tr style="background-color: lightgray" *ngFor="let item of (testarr | testpipe:input1.value) ">
+      <tr style="background-color: lightgray" *ngFor="let item of (testarr | testpipe:input1.value |paginate: { itemsPerPage: 2, currentPage: page } ) ">
       <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.user_name}}</td>
       <td>{{item.review_desc}}</td>
@@ -45,5 +45,8 @@
      </tr>
     </tbody>
   </table>
+   <div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   </div>
 </div>

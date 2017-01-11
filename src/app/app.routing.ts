@@ -32,8 +32,9 @@ import { UpdatetestComponent } from './testimonial-tbl/updatetest.component';
 import { EditlikeComponent } from './like-tbl/editlike.component';
 import { AddqueComponent } from './event-que-tbl/addque.component';
 import { EditqueComponent} from './event-que-tbl/editque.component';
-import { AddansComponent } from './ans-tbl/addans.component';
+import { AddansComponent} from './ans-tbl/addans.component';
 import { EditansComponent } from './ans-tbl/editans.component';
+import { CommentComponent } from './comment/comment.component';
 
 const router:Routes=[   
     {path:'',redirectTo:'/approve',pathMatch:'full'},
@@ -73,7 +74,7 @@ const router:Routes=[
     {path:'editque/:id',component:EditqueComponent},
     {path:'addans/:id/:eventid',component:AddansComponent},
     {path:'editans/:id',component:EditansComponent},
-    {path:'editque/:id',component:EditqueComponent}
+    {path:'comment/:id',component:CommentComponent}
 
 ];
 

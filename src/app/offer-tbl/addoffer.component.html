@@ -6,14 +6,7 @@
     <br><br><br>
     <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add new  Offer </b></h1>
     <form (ngSubmit)='addoffer()' #addform="ngForm">
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon1">Email Id</span>
-  <input name="emailid"  #emailid='ngModel' [(ngModel)]="offerarr.fk_email_id" type="text" class="form-control" placeholder="Enter Your Email id"  required>
-</div>
-<div [hidden]="emailid.valid" class="alert alert-danger">
-  Email Id   is required
-</div>
-<br>
+
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Price</span>
   <input name="price"  #price='ngModel' [(ngModel)]="offerarr.offer_price" type="number" class="form-control" placeholder="Enter Offer Price"  required>
@@ -24,7 +17,7 @@
 </div>
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Offer Name</span>
-  <input name="name"  #name='ngModel' [(ngModel)]="offerarr.offer_name" type="text" class="form-control" placeholder="Enter Offer Name"  required>
+  <input name="name"  #name="ngModel" [(ngModel)]="offerarr.offer_name" type="text" class="form-control" placeholder="Enter Offer Name"  required>
 </div>
 <br>
 <div [hidden]="name.valid" class="alert alert-danger">
@@ -47,14 +40,16 @@
   Offer photo   is required
 </div>
 <div class="input-group">
-  <span class="input-group-addon" id="sizing-addon1">Event Id</span>
-  <input name="eventid"  #eventid='ngModel' [(ngModel)]="offerarr.fk_event_id" type="number" class="form-control" placeholder="Enter Event id"  required>
-</div>
-<br>
-<div [hidden]="eventid.valid" class="alert alert-danger">
-  Offer photo   is required
+  <span class="input-group-addon" id="sizing-addon1">Event name</span>
+  <select name="pk_event_id" #event='ngModel' [(ngModel)]="pk_event_id" class="form-control" >
+    <option *ngFor="let c of eventarr" [value]="c.pk_event_id" selected>{{c.event_name}}</option>
+  </select>
 </div>
 
+<br>
+<div [hidden]="event.valid" class="alert alert-danger">
+  Event name  is required
+</div>
 <Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
 
 </form>

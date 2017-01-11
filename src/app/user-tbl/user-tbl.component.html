@@ -22,18 +22,20 @@
       <th style="text-align: center">Mobile No.</th>
       <th style="text-align: center">Name</th>
       <th style="text-align: center">City</th>
+      <th style="text-align: center">Photo</th>
       <th style="text-align: center">Type</th>
       <th style="text-align: center">Action</th>
       </tr>
     </thead>
 
     <tbody >
-      <tr style="background-color: lightgray" *ngFor="let item of (userarr | userpipe:input1.value) ">
+      <tr style="background-color: lightgray" *ngFor="let item of (userarr | userpipe:input1.value |paginate: { itemsPerPage: 2, currentPage: page } ) ">
         <td><input type="checkbox" (change)="addarr(item)"></td>
       <td>{{item.pk_email_id}}</td>
       <td>{{item.user_mobile_no}}</td>
       <td>{{item.user_name}}</td>
       <td>{{item.city_name}}</td>
+      <td><img src="http://localhost:3000{{item.user_photo}}" height="60" width="60" /></td>
       <td>{{item.user_type}}</td>
     
       <td>          
@@ -47,5 +49,8 @@
      </tr>
     </tbody>
   </table>
+   <div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   </div>
 </div>
