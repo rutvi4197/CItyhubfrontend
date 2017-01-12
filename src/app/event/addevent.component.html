@@ -14,14 +14,12 @@
 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
   Event name  is required
 </div>
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon1">Event logo</span>
-  <input name="logo" #logo='ngModel' [(ngModel)]="eventarr.event_logo" type="text" class="form-control" placeholder="Enter event Logo"  required>
-</div>
 <br>
-<div [hidden]="logo.valid " class="alert alert-danger">
-  Event logo  is required
-</div>
+<div>  
+  <input type="file"  (change)="fileChange(input)" #input />
+</div> 
+ <img [attr.src]='file_srcs[0]' alt=""/>
+
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon1">Event slogan</span>
   <input name="slogan" #slogan='ngModel' [(ngModel)]="eventarr.event_slogan" type="text" class="form-control" placeholder="Enter event slogan"  required>

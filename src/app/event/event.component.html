@@ -14,7 +14,10 @@
     </div>
     <div class="col-sm-6 col-md-4" *ngFor="let item of eventarr">
     <div class="thumbnail">
+      <img src="http://localhost:3000{{item.event_logo}}" alt="...">
+
       <img src="#" alt="...">
+
       <div class="caption">
         <a routerLink="/comment/{{item.pk_event_id}} ">
         <h3 style="color: red">{{item.event_name}}</h3>
