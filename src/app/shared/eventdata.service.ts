@@ -7,6 +7,7 @@ export class EventdataService {
 public url:string="http://localhost:3000/approvevent/";
 public url1:string="http://localhost:3000/event/";
 public url2:string="http://localhost:3000/disapprovedetails/";
+public url3:string="http://localhost:3000/deleteevent/";
 public caturl:string="http://localhost:3000/cat/";
 public offerurl:string="http://localhost:3000/offer/";
 
@@ -52,11 +53,14 @@ updateflag(item:Eventclass)
     (res:Response)=>res.json()
   );
 }
- deleteEvent(Id:number)
-{
-  let header=new Headers({'Content-Type':'application/json'});
-  let req=new RequestOptions({headers:header});
-  return this._http.delete(this.url1+Id,req);
+ deleteEvent(item:Eventclass)
+{ let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+  return this._http.put(this.url3+item.pk_event_id,body,option).map(
+    (res:Response)=>res.json()
+  );
+  
  
 }
   editevent(item:Eventclass)

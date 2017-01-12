@@ -43,7 +43,7 @@ this._Dataservice.updateflag(item).subscribe(
 
 deleteevent(item:Eventclass){
 
-    this._Dataservice.deleteEvent(item.pk_event_id).subscribe(
+    this._Dataservice.deleteEvent(item).subscribe(
     (data:any)=>{
       this.eventarr.splice(this.eventarr.indexOf(item),1);
     },
