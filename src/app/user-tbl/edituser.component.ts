@@ -47,7 +47,7 @@ public user_type:string;
         this.user_name=this.userarr[0].user_name;
         this.user_type=this.userarr[0].user_type;
         this.fk_city_id=this.userarr[0].fk_city_id;
-      
+     
     },
       function(error)
       {

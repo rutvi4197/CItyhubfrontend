@@ -78,7 +78,7 @@ i:number;
 
   deleteUser(item:Userclass)
   {
-    this._userdata.deleteUser(item.pk_email_id).subscribe(
+    this._userdata.deleteUser(item).subscribe(
       (data:any)=>{
         this.userarr.splice(this.userarr.indexOf(item),1);
       },
