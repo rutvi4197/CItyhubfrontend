@@ -49,7 +49,9 @@ addcomment()
       this._dataservice.addcomment(this.arr).subscribe(
     (data:any)=>
     {
-      this._router.navigate(['/allevent']);
+      //this._router.navigate(['/comment',this.event_id]);
+      this.commentarr.push(this.arr);
+      this.ans_desc="";
     },
     function(error)
     { },

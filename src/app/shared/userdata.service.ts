@@ -9,8 +9,8 @@ export class UserdataService {
 constructor(private _http:Http,) { }
   private url:string="http://localhost:3000/users/";
   private url1:string="http://localhost:3000/userdetails/";
-  private caturl:string="http://localhost:3000/cities";
- 
+  private caturl:string="http://localhost:3000/cities/";
+   private deleteurl:string="http://localhost:3000/deleteuser/";
  getAllUser()
   {
     return this._http.get(this.url).map(
@@ -64,11 +64,14 @@ constructor(private _http:Http,) { }
       (res:Response)=>res.json()
     );
   }
-  deleteUser(Id:string)
+  deleteUser(item:Userclass)
   { 
-    let headers=new Headers({'Content-Type':'application/json'});
-    let req=new RequestOptions({headers:headers});
-    return this._http.delete(this.url+Id,req); 
+   let body=JSON.stringify(item);
+    let header=new Headers({'Content-Type':'application/json'});
+    let option=new RequestOptions({headers:header});
+   return this._http.put(this.deleteurl+item.pk_email_id,body,option).map(
+      (res:Response)=>res.json()
+    );
   }
 
 }
