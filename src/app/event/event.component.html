@@ -16,8 +16,10 @@
     <div class="thumbnail">
       <img src="#" alt="...">
       <div class="caption">
+        <a routerLink="/comment/{{item.pk_event_id}} ">
         <h3 style="color: red">{{item.event_name}}</h3>
         <p>Ticket price : {{item.event_price}}</p>
+         </a>
         <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
         <button type="button" (click)="ticketinfo(item)" class="btn btn-primary" role="button">ticketinfo</button>
         <button (click)="editevent(item)" type="button" class="btn btn-success" aria-label="Left Align">
