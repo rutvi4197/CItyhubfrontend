@@ -1,0 +1,62 @@
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Update Venue </b></h1>
+
+    <form (ngSubmit)='updateVenue()' #addform="ngForm">
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Venue Name</span>
+  <input name="mn" #mn='ngModel' [(ngModel)]="venue_name" type="text" class="form-control" placeholder="Enter Venue Name"  required>
+</div>
+
+<br>
+<div [hidden]="mn.valid" class="alert alert-danger">
+  Venue Name  is required
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Venue Address</span>
+  <input name="add" #add='ngModel' [(ngModel)]="venue_address" type="text" class="form-control" placeholder="Venue Address"  required>
+</div>
+
+<br>
+<div [hidden]="add.valid || add.pristine" class="alert alert-danger">
+  User Address  is required
+</div>
+
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">City name</span>
+  <select name="pk_city_id" #city='ngModel' [(ngModel)]="pk_city_id" class="form-control" >
+    <option *ngFor="let c of cityarr" [value]="c.pk_city_id" selected>{{c.city_name}}</option>
+  </select>
+</div>
+
+<br>
+<div [hidden]="city.valid || name.pristine" class="alert alert-danger">
+  City name  is required
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Pincode</span>
+  <input name="pc" #pc='ngModel' [(ngModel)]="pincode" type="number" class="form-control" placeholder="Enter Pincode"  required>
+</div>
+
+<br>
+<div [hidden]="pc.valid || pc.pristine" class="alert alert-danger">
+  Pincode is required
+</div>
+
+<button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</button>
+
+</form>
+  </div>
+</div>

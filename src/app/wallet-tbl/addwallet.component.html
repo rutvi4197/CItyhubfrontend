@@ -1,0 +1,41 @@
+<div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add City </b></h1>
+    <form (ngSubmit)='addwallet()' #addform="ngForm">
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Email Id</span>
+  <input name="emailid" #emailid='ngModel' [(ngModel)]="walletarr.fk_email_id" type="email" class="form-control" placeholder="Enter email id"  required>
+</div>
+
+<br>
+<div [hidden]="emailid.valid" class="alert alert-danger">
+  EMail id is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Wallet Amount</span>
+  <input name="amnt" #amnt='ngModel' [(ngModel)]="walletarr.wallet_amnt" type="number" class="form-control" placeholder="Enter Wallet amnt"  required>
+</div>
+
+<br>
+<div [hidden]="amnt.valid" class="alert alert-danger">
+  Wallet amount is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Wallet date</span>
+  <input name="date" #date='ngModel' [(ngModel)]="walletarr.wallet_date" type="text" class="form-control" placeholder="Enter Wallet date"  required>
+</div>
+
+<br>
+<div [hidden]="date.valid" class="alert alert-danger">
+  Date is required
+</div>
+
+<Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
+
+</form>
+  </div>
+</div>
