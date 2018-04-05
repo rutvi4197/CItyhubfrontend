@@ -1,0 +1,84 @@
+  <div class="row" >
+  <div class="col-md-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <h1 style="color:red;text-align: center; font-size: 30px;"><b>Add Event </b></h1>
+    <form (ngSubmit)='addevent()' #addform="ngForm">
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event name</span>
+  <input name="name" #name='ngModel' [(ngModel)]="eventarr.event_name" type="text" class="form-control" placeholder="Enter event name"  required>
+</div>
+<br>
+<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+  Event name  is required
+</div>
+<br>
+<div>  
+  <input type="file"  (change)="fileChange(input)" #input />
+</div> 
+ <img [attr.src]='file_srcs[0]' alt=""/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event slogan</span>
+  <input name="slogan" #slogan='ngModel' [(ngModel)]="eventarr.event_slogan" type="text" class="form-control" placeholder="Enter event slogan"  required>
+</div>
+<br>
+<div [hidden]="slogan.valid " class="alert alert-danger">
+  Event slogan  is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event Description</span>
+  <textarea rows="4" cols="100" name="desc" #desc='ngModel' [(ngModel)]="eventarr.event_des" >
+  </textarea>
+</div>
+<br>
+<div [hidden]="desc.valid " class="alert alert-danger">
+  Event Description is required
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event Date</span>
+  <input name="date" #date='ngModel' [(ngModel)]="eventarr.event_date" type="text" class="form-control" placeholder="Enter Event date"  required/>
+</div>
+<div [hidden]="date.valid " class="alert alert-danger">
+  Event Date is required
+</div>
+<br>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event Time</span>
+  <input name="time" #time='ngModel' [(ngModel)]="eventarr.event_time" type="text" class="form-control" placeholder="Enter Event time"  required>
+</div>
+<div [hidden]="time.valid " class="alert alert-danger">
+  Event TIme is required
+</div><br>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Event Price</span>
+  <input name="price" #price='ngModel' [(ngModel)]="eventarr.event_price" type="number" class="form-control" placeholder="Enter Event Price"  required>
+</div>
+<div [hidden]="price.valid " class="alert alert-danger">
+  Event Price is required
+</div><br>
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Category name</span>
+  <select name="pk_cat_id" #cat='ngModel' [(ngModel)]="pk_cat_id" class="form-control">
+    <option *ngFor="let c of catarr" [value]="c.pk_cat_id" selected>{{c.cat_name}}</option>
+  </select>
+</div>
+<div [hidden]="cat.valid || cat.pristine" class="alert alert-danger">
+  Cat name  is required
+</div><br>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1">Offer  name</span>
+  <select name="pk_offer_id" #offer='ngModel' [(ngModel)]="pk_offer_id" class="form-control">
+    <option *ngFor="let c of offerarr" [value]="c.pk_offer_id" selected>{{c.offer_name}}</option>
+  </select>
+</div>
+<br>
+
+<Button type="Submit" class="btn btn-info form-control" [disabled]="!addform.form.valid" name="ADD">ADD</Button>
+
+</form>
+  </div>
+</div>
