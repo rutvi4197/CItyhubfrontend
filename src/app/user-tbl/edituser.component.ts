@@ -17,11 +17,9 @@ public pk_email_id:string='';
 public user_password:string;
 public user_mobile_no:string;
 public user_name:string;
-<<<<<<< HEAD
+
 public pk_city_id:number;
-=======
-public fk_city_id:number;
->>>>>>> 00c440d53d6a54b03df92e58ac0b6fee80ad53ce
+
 public user_type:string;
 
   constructor(private _userdataservice:UserdataService,private _router:Router,private _acrouter:ActivatedRoute ) { }
@@ -50,11 +48,9 @@ public user_type:string;
         this.user_mobile_no=this.userarr[0].user_mobile_no;
         this.user_name=this.userarr[0].user_name;
         this.user_type=this.userarr[0].user_type;
-<<<<<<< HEAD
+
         this.pk_city_id=this.userarr[0].fk_city_id;
-=======
-        this.fk_city_id=this.userarr[0].fk_city_id;
->>>>>>> 00c440d53d6a54b03df92e58ac0b6fee80ad53ce
+
      
     },
       function(error)
@@ -69,11 +65,8 @@ public user_type:string;
   }
 updateUser()
 {
-<<<<<<< HEAD
   this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.pk_city_id,this.user_type,'')).subscribe(
-=======
-  this._userdataservice.updateUser(new Userclass(this.pk_email_id,this.user_password,this.user_mobile_no,this.user_name,this.fk_city_id,this.user_type,'')).subscribe(
->>>>>>> 00c440d53d6a54b03df92e58ac0b6fee80ad53ce
+
     (data:any)=>
     {
       this._router.navigate(['/alluser']);
